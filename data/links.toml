@@ -1,0 +1,20 @@
+# [[blogroll]]
+#   name = "reuixiy"
+#   url = "https://io-oi.me/"
+#   avatar = "/images/friends/reuixiy.png"
+#   description = "Viva La Vida"
+#   weight = 1
+
+# [[blogroll]]
+#   name = "Dnocm"
+#   url = "https://www.dnocm.com/"
+#   avatar = "/images/friends/dnocm.jpg"
+#   description = "若白驹过隙，忽然而已"
+#   weight = 2
+
+# [[blogroll]]
+#   name = "Linux游戏站"
+#   url = "https://linuxgame.cn/"
+#   avatar = "/images/friends/guoxiaotao.jpg"
+#   description = "若白驹过隙，忽然而已"
+#   weight = 1

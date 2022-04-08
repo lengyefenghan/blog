@@ -1,0 +1,70 @@
+[zh]
+title = "冷夜枫寒"
+languageName = "简体中文"
+weight = 1
+contentDir = "content"
+
+
+#[zh-tw]
+#title = "冷夜楓寒"
+#languageName = "繁體中文"
+#weight = 2
+#contentDir = "content/zh-tw"
+
+
+
+##########################################
+# 自行添加的多语言站点配置
+
+# 中文
+# [languages.zh-cn]
+#     languageName = "简体中文"
+#     contentDir = "content/zh-cn"
+#     weight = 1
+
+
+# # 繁体
+# [languages.zh-tw]
+#     languageName = "繁體中文"
+#     contentDir = "content/zh-tw"
+#     weight = 2
+#     languageCode = "zh-tw"
+#     hasCJKLanguage = false
+#     copyright = "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)"
+# [languages.zh-tw.taxonomies]
+#     # category = "categories"
+#     # tag = "tags"
+# [languages.zh-tw.menu]
+#     # [[languages.en.menu.home]]
+#     #     url = "/en/about/"
+#     #     weight = 3
+#     #     pre = "internal"
+#     #     post = "user-circle"
+#     #     identifier = "about"
+#     [[languages.zh-tw.menu.home]]
+#         url = "/"
+#         name = "about"
+#         weight = 1
+#         pre = "internal"
+#         post = "user-circle"
+#         identifier = "home"
+#     [[languages.zh-tw.menu.main]]
+#         weight = 2
+#         identifier = "theme-switcher"
+#     [[languages.zh-tw.menu.main]]
+#         weight = 3
+#         identifier = "lang-switcher"
+# [languages.zh-tw.params]
+#     homePoetry = ["In the dark night", "Longing for a light of care", "In the daylight", "Desiring for the swallow of a black hole", "’Cause curiosity—seeks for what it’s in the darkness"]
+#     siteDescription = "Blog of reuixiy in English."
+#     listDateFormat = "January 2"
+#     fontFamilyTitle = "'Amstelvar', serif"
+#     fontFamilyHeadings = "'Amstelvar', serif"
+#     fontFamilyBody = "'Amstelvar', serif"
+#     fontsLink = "https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+#     lineHeight = 1.618
+#     enableJustify = false
+#     enableSmallCaps = true
+#     enableEmphasisPoint = false
+#     enableChinesePunctuationGlyphCorrection = false
+#     customFooter = "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)"

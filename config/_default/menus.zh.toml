@@ -1,0 +1,92 @@
+
+    [[main]]
+        url = "/"
+        name = "首页"
+        weight = 1
+        pre = "internal"
+        post = "home"
+    [[main]]
+        url = "/blogs/"
+        name = "文章"
+        weight = 2
+        pre = "internal"
+        post = "archive"
+    [[main]]
+        url = "/storys/"
+        name = "随笔"
+        weight = 3
+        pre = "internal"
+        post = "grav"
+    [[main]]
+        url = "/links/"
+        name = "链接"
+        weight = 4
+        pre = "internal"
+        post = "link"
+    [[main]]
+        url = "/about/"
+        name = "关于"
+        weight = 5
+        pre = "internal"
+        post = "user-circle"
+    # [[main]]
+    #     url = "/zh-tw/"
+    #     name = "繁體中文"
+    #     weight = 6
+    #     pre = "internal"
+    #     post = ""
+
+# [[main]]
+#   identifier = "docs"
+#   name = "Docs"
+#   url = "docs"
+#   weight = 1
+
+# [[main]]
+#   identifier = "updates"
+#   name = "Updates"
+#   url = "updates"
+#   weight = 2
+
+# [[main]]
+#   identifier = "blog"
+#   name = "Blog"
+#   url = "blog"
+#   weight = 3
+
+# [menu]
+#     ## 菜单栏
+#     [[menu.main]]
+#         url = "/"
+#         name = "首页"
+#         weight = 1
+#         pre = "internal"
+#         post = "home"
+#     [[menu.main]]
+#         url = "/posts/"
+#         name = "文章"
+#         weight = 2
+#         pre = "internal"
+#         post = "archive"
+#     [[menu.main]]
+#         url = "/categories/"
+#         name = "分类"
+#         weight = 3
+#         pre = "internal"
+#         post = "th"
+#     [[menu.main]]
+#         url = "/tags/"
+#         name = "标签"
+#         weight = 4
+#         pre = "internal"
+#         post = "tags"
+#     [[menu.main]]
+#         url = "/about/"
+#         name = "关于"
+#         weight = 5
+#         pre = "internal"
+#         post = "user-circle"
+    
+# #    [[menu.main]]
+# #        name="繁体中文"
+# #        weight = 6
