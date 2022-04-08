@@ -1,36 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-cn" data-theme="light">
+<html lang="zh-cn">
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.82.0" /><meta name="theme-color" content="#fff" />
-        <script>
-            const userPrefers = localStorage.getItem('theme');
-            const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-            const lightModeMediaQuery = window.matchMedia('(prefers-color-scheme: light)');
-            if (userPrefers === 'dark') {
-                changeModeMeta('dark');
-            } else if (userPrefers === 'light') {
-                changeModeMeta('light');
-            } else if (darkModeMediaQuery.matches) {
-                changeModeMeta('dark');
-            } else if (lightModeMediaQuery.matches) {
-                changeModeMeta('light');
-            }
-            function changeModeMeta(theme) {
-                document.documentElement.setAttribute('data-theme', theme);
-                if (theme === 'dark') {
-                    changeThemeColor('#16171d');
-                } else {
-                    changeThemeColor('#fff');
-                }
-            }
-            function changeThemeColor(themeColor) {
-                document.querySelector('meta[name="theme-color"]').setAttribute('content', themeColor);
-            }
-        </script>
-
-    
+    <meta name="generator" content="Hugo 0.96.0" /><meta name="theme-color" content="#fff" />
+    <meta name="color-scheme" content="light dark">
 
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -43,23 +17,27 @@
 
     <title>Go 通过windows wmi获取系统信息 | 冷夜枫寒</title>
 
-    <link rel="stylesheet" href="/css/meme.min.8993e80f8dfc4f683375512acb83205bc77cb8af120a5f28d0efd4483f631493.css" integrity="sha256-iZPoD438T2gzdVEqy4MgW8d8uK8SCl8o0O/USD9jFJM=" />
+    <link rel="stylesheet" href="/css/meme.min.59ff2778162c93c46d0170552c71466424f4112e97152d3d66e9daf1afc35286.css"/>
+
+    
+    
+        <script src="/js/meme.min.45a777da25d0b1805991f984be4e9ae5e17f3ea94097882dff058256fa34eb17.js"></script>
+
+    
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" media="print" onload="this.media='all'" />
         <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" /></noscript>
 
-    <meta name="author" content="冷夜枫寒" /><meta name="description" content="wmi是什么 WMI，是Windows 2K/XP管理系统的核心；对于其他的Win32操……
-    
-    " />
+    <meta name="author" content="冷夜枫寒" /><meta name="description" content="wmi是什么 WMI，是Windows 2K/XP管理系统的核心；对于其他的Win32操……" />
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
     <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="冷夜枫寒" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="application-name" content="冷夜枫寒" />
     <meta name="msapplication-starturl" content="../../" />
@@ -72,19 +50,20 @@
 
     
     <link rel="canonical" href="https://lengyefenghan.top/blogs/2021-04-21/" />
+    
 
 <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2021-04-21T08:56:32+08:00",
-        "dateModified": "2021-04-21T09:12:36+08:00",
+        "dateModified": "2022-04-08T18:08:27+08:00",
         "url": "https://lengyefenghan.top/blogs/2021-04-21/",
         "headline": "Go 通过windows wmi获取系统信息",
-        "description": "wmi是什么 WMI，是Windows 2K/XP管理系统的核心；对于其他的Win32操……\n    \n    ",
+        "description": "wmi是什么 WMI，是Windows 2K/XP管理系统的核心；对于其他的Win32操……",
         "inLanguage" : "zh-cn",
         "articleSection": "blogs",
-        "wordCount":  535 ,
+        "wordCount":  534 ,
         "image": "https://lengyefenghan.top/icons/lengyefenghan-logo.png",
         "author": {
             "@type": "Person",
@@ -123,15 +102,13 @@
 
 
 <meta property="og:title" content="Go 通过windows wmi获取系统信息" />
-<meta property="og:description" content="wmi是什么 WMI，是Windows 2K/XP管理系统的核心；对于其他的Win32操……
-    
-    " />
+<meta property="og:description" content="wmi是什么 WMI，是Windows 2K/XP管理系统的核心；对于其他的Win32操……" />
 <meta property="og:url" content="https://lengyefenghan.top/blogs/2021-04-21/" />
 <meta property="og:site_name" content="冷夜枫寒" />
 <meta property="og:locale" content="zh" /><meta property="og:image" content="https://lengyefenghan.top/icons/lengyefenghan-logo.png" />
     <meta property="og:type" content="article" />
     <meta property="article:published_time" content="2021-04-21T08:56:32&#43;08:00" />
-    <meta property="article:modified_time" content="2021-04-21T09:12:36&#43;08:00" />
+    <meta property="article:modified_time" content="2022-04-08T18:08:27&#43;08:00" />
     
     <meta property="article:section" content="blogs" />
 
@@ -165,15 +142,18 @@
 
 
     
+    
+
+    
 </head>
 
     <body>
         <div class="container">
             
-    <header class="header" data-scroll-header>
+    <header class="header">
         
             <div class="header-wrapper">
-                <div class="header-inner">
+                <div class="header-inner single">
                     
     <div class="site-brand">
         
@@ -195,7 +175,7 @@
             
         
             
-                <li class="menu-item active"><a href="/blogs/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon archive"><path d="M32 448c0 17.7 14.3 32 32 32h384c17.7 0 32-14.3 32-32V160H32v288zm160-212c0-6.6 5.4-12 12-12h104c6.6 0 12 5.4 12 12v8c0 6.6-5.4 12-12 12H204c-6.6 0-12-5.4-12-12v-8zM480 32H32C14.3 32 0 46.3 0 64v48c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16V64c0-17.7-14.3-32-32-32z"/></svg><span class="menu-item-name">文章</span></a>
+                <li class="menu-item"><a href="/blogs/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon archive"><path d="M32 448c0 17.7 14.3 32 32 32h384c17.7 0 32-14.3 32-32V160H32v288zm160-212c0-6.6 5.4-12 12-12h104c6.6 0 12 5.4 12 12v8c0 6.6-5.4 12-12 12H204c-6.6 0-12-5.4-12-12v-8zM480 32H32C14.3 32 0 46.3 0 64v48c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16V64c0-17.7-14.3-32-32-32z"/></svg><span class="menu-item-name">文章</span></a>
                 </li>
             
         
@@ -239,9 +219,9 @@
 
         
 
-        <article class="content post" data-align="justify" data-type="blogs">
+        <article class="content post h-entry" data-align="justify" data-type="blogs">
 
-            <h1 class="post-title">Go 通过windows wmi获取系统信息</h1>
+            <h1 class="post-title p-name">Go 通过windows wmi获取系统信息</h1>
 
             
 
@@ -255,11 +235,11 @@
 <div class="post-meta">
     
         
-        <time datetime="2021-04-21T08:56:32&#43;08:00" class="post-meta-item published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2021.4.21</time>
+        <time datetime="2021-04-21T08:56:32&#43;08:00" class="post-meta-item published dt-published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2021.4.21</time>
     
     
         
-        <time datetime="2021-04-21T09:12:36&#43;08:00" class="post-meta-item modified"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2021.4.21</time>
+        <time datetime="2022-04-08T18:08:27&#43;08:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2022.4.8</time>
     
     
     
@@ -271,7 +251,7 @@
     
     
         
-        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;535</span>
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;534</span>
     
     
         
@@ -283,13 +263,13 @@
 
             
 
-            <div class="post-body">
-              <h1 id="wmi是什么">wmi是什么</h1>
+            <div class="post-body e-content">
+                <h1 id="wmi是什么">wmi是什么</h1>
 <p>WMI，是Windows 2K/XP管理系统的核心；对于其他的Win32操作系统，WMI是一个有用的插件。WMI以CIMOM为基础，CIMOM即公共信息模型对象管理器（Common Information Model Object Manager），是一个描述操作系统构成单元的对象数据库，为MMC和脚本程序提供了一个访问操作系统构成单元的公共接口。有了WMI，工具软件和脚本程序访问操作系统的不同部分时不需要使用不同的API；相反，操作系统的不同部分都可以插入WMI，如图所示，工具软件和脚本程序可以方便地读写WMI。</p>
 <h1 id="go语言如何调用">Go语言如何调用</h1>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -371,114 +351,102 @@
 </span><span class="lnt">80
 </span><span class="lnt">81
 </span><span class="lnt">82
-</span><span class="lnt">83
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-Go" data-lang="Go"><span class="kn">package</span> <span class="nx">main</span>
-
-<span class="kn">import</span> <span class="p">(</span>
-	<span class="s">&#34;github.com/StackExchange/wmi&#34;</span>
-	<span class="s">&#34;fmt&#34;</span>
-    <span class="s">&#34;log&#34;</span>
-<span class="p">)</span>
-<span class="c1">//根据文档定义的完整结构体
-</span><span class="c1">//https://docs.microsoft.com/en-us/windows/win32/cimwin32prov/win32-processor
-</span><span class="c1"></span><span class="kd">type</span> <span class="nx">Win32_Processor</span> <span class="kd">struct</span> <span class="p">{</span>
-	<span class="nx">AddressWidth</span>	<span class="kt">uint16</span>
-	<span class="nx">Architecture</span>	<span class="kt">uint16</span>
-	<span class="nx">AssetTag</span>	<span class="kt">string</span>
-	<span class="nx">Availability</span>	<span class="kt">uint16</span>
-	<span class="nx">Caption</span>	<span class="kt">string</span>
-	<span class="nx">Characteristics</span>	<span class="kt">uint32</span>
-	<span class="nx">ConfigManagerErrorCode</span>	<span class="kt">uint32</span>
-	<span class="nx">ConfigManagerUserConfig</span>	<span class="kt">bool</span>
-	<span class="nx">CpuStatus</span>	<span class="kt">uint16</span>
-	<span class="nx">CreationClassName</span>	<span class="kt">string</span>
-	<span class="nx">CurrentClockSpeed</span>	<span class="kt">uint32</span>
-	<span class="nx">CurrentVoltage</span>	<span class="kt">uint16</span>
-	<span class="nx">DataWidth</span>	<span class="kt">uint16</span>
-	<span class="nx">Description</span>	<span class="kt">string</span>
-	<span class="nx">DeviceID</span>	<span class="kt">string</span>
-	<span class="nx">ErrorCleared</span>	<span class="kt">bool</span>
-	<span class="nx">ErrorDescription</span>	<span class="kt">string</span>
-	<span class="nx">ExtClock</span>	<span class="kt">uint32</span>
-	<span class="nx">Family</span>	<span class="kt">uint16</span>
-	<span class="nx">InstallDate</span>	<span class="nx">time</span><span class="p">.</span><span class="nx">Time</span>
-	<span class="nx">L2CacheSize</span>	<span class="kt">uint32</span>
-	<span class="nx">L2CacheSpeed</span>	<span class="kt">uint32</span>
-	<span class="nx">L3CacheSize</span>	<span class="kt">uint32</span>
-	<span class="nx">L3CacheSpeed</span>	<span class="kt">uint32</span>
-	<span class="nx">LastErrorCode</span>	<span class="kt">uint32</span>
-	<span class="nx">Level</span>	<span class="kt">uint16</span>
-	<span class="nx">LoadPercentage</span>	<span class="kt">uint16</span>
-	<span class="nx">Manufacturer</span>	<span class="kt">string</span>
-	<span class="nx">MaxClockSpeed</span>	<span class="kt">uint32</span>
-	<span class="nx">Name</span>	<span class="kt">string</span>
-	<span class="nx">NumberOfCores</span>	<span class="kt">uint32</span>
-	<span class="nx">NumberOfEnabledCore</span>	<span class="kt">uint32</span>
-	<span class="nx">NumberOfLogicalProcessors</span>	<span class="kt">uint32</span>
-	<span class="nx">OtherFamilyDescription</span>	<span class="kt">string</span>
-	<span class="nx">PartNumber</span>	<span class="kt">string</span>
-	<span class="nx">PNPDeviceID</span>	<span class="kt">string</span>
-	<span class="nx">PowerManagementCapabilities</span><span class="p">[]</span>	<span class="kt">uint16</span>
-	<span class="nx">PowerManagementSupported</span>	<span class="kt">bool</span>
-	<span class="nx">ProcessorId</span>	<span class="kt">string</span>
-	<span class="nx">ProcessorType</span>	<span class="kt">uint16</span>
-	<span class="nx">Revision</span>	<span class="kt">uint16</span>
-	<span class="nx">Role</span>	<span class="kt">string</span>
-	<span class="nx">SecondLevelAddressTranslationExtensions</span>	<span class="kt">bool</span>
-	<span class="nx">SerialNumber</span>	<span class="kt">string</span>
-	<span class="nx">SocketDesignation</span>	<span class="kt">string</span>
-	<span class="nx">Status</span>	<span class="kt">string</span>
-	<span class="nx">StatusInfo</span>	<span class="kt">uint16</span>
-	<span class="nx">Stepping</span>	<span class="kt">string</span>
-	<span class="nx">SystemCreationClassName</span>	<span class="kt">string</span>
-	<span class="nx">SystemName</span>	<span class="kt">string</span>
-	<span class="nx">ThreadCount</span>	<span class="kt">uint32</span>
-	<span class="nx">UniqueId</span>	<span class="kt">string</span>
-	<span class="nx">UpgradeMethod</span>	<span class="kt">uint16</span>
-	<span class="nx">Version</span>	<span class="kt">string</span>
-	<span class="nx">VirtualizationFirmwareEnabled</span>	<span class="kt">bool</span>
-	<span class="nx">VMMonitorModeExtensions</span>	<span class="kt">bool</span>
-	<span class="nx">VoltageCaps</span>	<span class="kt">uint32</span>
-<span class="p">}</span>
-<span class="c1">//通过wmi库获取类，返回给结构体
-</span><span class="c1"></span><span class="kd">func</span> <span class="nf">GetWin32_Processor</span><span class="p">()[]</span><span class="nx">Win32_Processor</span><span class="p">{</span>
-	<span class="kd">var</span> <span class="nx">info</span> <span class="p">[]</span><span class="nx">Win32_Processor</span>
-	<span class="nx">err</span> <span class="o">:=</span> <span class="nx">wmi</span><span class="p">.</span><span class="nf">Query</span><span class="p">(</span><span class="s">&#34;Select * from Win32_Processor&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="nx">info</span><span class="p">)</span>
-	<span class="k">if</span> <span class="nx">err</span> <span class="o">==</span> <span class="kc">nil</span> <span class="p">{</span>
-		<span class="k">return</span> <span class="nx">info</span>
-	<span class="p">}</span>
-	<span class="nx">log</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
-	<span class="k">return</span> <span class="kc">nil</span>
-<span class="p">}</span>
-<span class="c1">//输出查询结果
-</span><span class="c1"></span><span class="kd">func</span> <span class="nf">main</span><span class="p">(){</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nf">GetWin32_Processor</span><span class="p">())</span>
-<span class="p">}</span>
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-Go" data-lang="Go"><span class="line"><span class="cl"><span class="kn">package</span> <span class="nx">main</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;github.com/StackExchange/wmi&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;fmt&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#34;log&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//根据文档定义的完整结构体
+</span></span></span><span class="line"><span class="cl"><span class="c1">//https://docs.microsoft.com/en-us/windows/win32/cimwin32prov/win32-processor
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">type</span> <span class="nx">Win32_Processor</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">AddressWidth</span>	<span class="kt">uint16</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">Architecture</span>	<span class="kt">uint16</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">AssetTag</span>	<span class="kt">string</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">Availability</span>	<span class="kt">uint16</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">Caption</span>	<span class="kt">string</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">Characteristics</span>	<span class="kt">uint32</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">ConfigManagerErrorCode</span>	<span class="kt">uint32</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">ConfigManagerUserConfig</span>	<span class="kt">bool</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">CpuStatus</span>	<span class="kt">uint16</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">CreationClassName</span>	<span class="kt">string</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">CurrentClockSpeed</span>	<span class="kt">uint32</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">CurrentVoltage</span>	<span class="kt">uint16</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">DataWidth</span>	<span class="kt">uint16</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">Description</span>	<span class="kt">string</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">DeviceID</span>	<span class="kt">string</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">ErrorCleared</span>	<span class="kt">bool</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">ErrorDescription</span>	<span class="kt">string</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">ExtClock</span>	<span class="kt">uint32</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">Family</span>	<span class="kt">uint16</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">InstallDate</span>	<span class="nx">time</span><span class="p">.</span><span class="nx">Time</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">L2CacheSize</span>	<span class="kt">uint32</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">L2CacheSpeed</span>	<span class="kt">uint32</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">L3CacheSize</span>	<span class="kt">uint32</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">L3CacheSpeed</span>	<span class="kt">uint32</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">LastErrorCode</span>	<span class="kt">uint32</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">Level</span>	<span class="kt">uint16</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">LoadPercentage</span>	<span class="kt">uint16</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">Manufacturer</span>	<span class="kt">string</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">MaxClockSpeed</span>	<span class="kt">uint32</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">Name</span>	<span class="kt">string</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">NumberOfCores</span>	<span class="kt">uint32</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">NumberOfEnabledCore</span>	<span class="kt">uint32</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">NumberOfLogicalProcessors</span>	<span class="kt">uint32</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">OtherFamilyDescription</span>	<span class="kt">string</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">PartNumber</span>	<span class="kt">string</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">PNPDeviceID</span>	<span class="kt">string</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">PowerManagementCapabilities</span><span class="p">[]</span>	<span class="kt">uint16</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">PowerManagementSupported</span>	<span class="kt">bool</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">ProcessorId</span>	<span class="kt">string</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">ProcessorType</span>	<span class="kt">uint16</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">Revision</span>	<span class="kt">uint16</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">Role</span>	<span class="kt">string</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">SecondLevelAddressTranslationExtensions</span>	<span class="kt">bool</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">SerialNumber</span>	<span class="kt">string</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">SocketDesignation</span>	<span class="kt">string</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">Status</span>	<span class="kt">string</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">StatusInfo</span>	<span class="kt">uint16</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">Stepping</span>	<span class="kt">string</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">SystemCreationClassName</span>	<span class="kt">string</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">SystemName</span>	<span class="kt">string</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">ThreadCount</span>	<span class="kt">uint32</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">UniqueId</span>	<span class="kt">string</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">UpgradeMethod</span>	<span class="kt">uint16</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">Version</span>	<span class="kt">string</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">VirtualizationFirmwareEnabled</span>	<span class="kt">bool</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">VMMonitorModeExtensions</span>	<span class="kt">bool</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">VoltageCaps</span>	<span class="kt">uint32</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//通过wmi库获取类，返回给结构体
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">func</span> <span class="nf">GetWin32_Processor</span><span class="p">()[]</span><span class="nx">Win32_Processor</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kd">var</span> <span class="nx">info</span> <span class="p">[]</span><span class="nx">Win32_Processor</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">err</span> <span class="o">:=</span> <span class="nx">wmi</span><span class="p">.</span><span class="nf">Query</span><span class="p">(</span><span class="s">&#34;Select * from Win32_Processor&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="nx">info</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">err</span> <span class="o">==</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="nx">info</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">log</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="kc">nil</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//输出查询结果
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">func</span> <span class="nf">main</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nf">GetWin32_Processor</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h1 id="接口文档位置">接口文档位置</h1>
 <p><a href="https://docs.microsoft.com/en-us/windows/win32/cimwin32prov/cimwin32-wmi-providers" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/windows/win32/cimwin32prov/cimwin32-wmi-providers</a></p>
 
             </div>
 
-        </article>
-
-        <ins class="adsbygoogle" style="display:block; text-align:center;"
-    data-ad-client="ca-pub-4304291357650629"
-    data-ad-slot="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></ins>
-<script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-
-        
+            
     
     
         <ul class="post-copyright">
-            <li class="copyright-item author"><span class="copyright-item-text">作者</span>：<a href="https://lengyefenghan.top/" target="_blank" rel="noopener">冷夜枫寒</a></li>
+            <li class="copyright-item author"><span class="copyright-item-text">作者</span>：<a href="https://lengyefenghan.top/" class="p-author h-card" target="_blank" rel="noopener">冷夜枫寒</a></li>
             
                 
                 
@@ -493,11 +461,21 @@
 
 
 
+        </article>
+
+        <ins class="adsbygoogle" style="display:block; text-align:center;"
+    data-ad-client="ca-pub-4304291357650629"
+    data-ad-slot="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
         
     <div class="updated-badge-container">
-        <span title="Updated @ 2021-04-21 09:12:36 CST" style="cursor:help">
+        <span title="Updated @ 2022-04-08 18:08:27 CST" style="cursor:help">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2021-04-21</text><text x="915" y="140" textLength="650" transform="scale(.1)">2021-04-21</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2022-04-08</text><text x="915" y="140" textLength="650" transform="scale(.1)">2022-04-08</text></g></svg>
         </span></div>
 
 
@@ -535,6 +513,10 @@
     
         <ul class="post-nav">
             
+                <li class="post-nav-prev">
+                    <a href="/blogs/2022-04-08-1/" rel="prev">&lt; 在Archlinux下安装nextcloud</a>
+                </li>
+            
             
                 <li class="post-nav-next">
                     <a href="/blogs/2021-03-23/" rel="next">go-sciter踩坑记录 &gt;</a>
@@ -561,7 +543,7 @@
             
     <footer id="footer" class="footer">
         <div class="footer-inner">
-            <div class="site-info">©&nbsp;2018–2021&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon footer-icon"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>&nbsp;冷夜枫寒</div><div class="powered-by">Powered by <a href="https://github.com/gohugoio/hugo" target="_blank" rel="noopener">Hugo</a> | Theme is <a href="https://github.com/reuixiy/hugo-theme-meme" target="_blank" rel="noopener">MemE</a></div><div class="site-copyright"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></div>
+            <div class="site-info">©&nbsp;2018–2022&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon footer-icon"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>&nbsp;冷夜枫寒</div><div class="powered-by">Powered by <a href="https://github.com/gohugoio/hugo" target="_blank" rel="noopener">Hugo</a> | Theme is <a href="https://github.com/reuixiy/hugo-theme-meme" target="_blank" rel="noopener">MemE</a></div><div class="site-copyright"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></div>
 
             
     
@@ -584,21 +566,9 @@
 
 
         </div>
-        <script src="/js/meme.min.37601e45e81baa82cb10287dfeb2a1b69b31d06e2c49053a565fd3854c0ebe7d.js" integrity="sha256-N2AeRegbqoLLECh9/rKhtpsx0G4sSQU6Vl/ThUwOvn0="></script>
+        
 
-
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-
-<script>
-    var scroll = new SmoothScroll('a[href*="#"]', {
-        speedAsDuration: true,
-        header: '[data-scroll-header]'
-    });
-</script>
-
-
-
-
+        
 
 
 
@@ -610,7 +580,10 @@
     <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
 
 <script>
-    mediumZoom(document.querySelectorAll('div.post-body img'), {
+    let imgNodes = document.querySelectorAll('div.post-body img');
+    imgNodes = Array.from(imgNodes).filter(node => node.parentNode.tagName !== "A");
+
+    mediumZoom(imgNodes, {
         background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
     })
 </script>
@@ -618,10 +591,7 @@
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.min.js" type="module" defer></script>
-
-
-
+    <script src="https://cdn.jsdelivr.net/npm/instant.page@5.1.0/instantpage.min.js" type="module" defer></script>
 
 
 

@@ -1,36 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-cn" data-theme="light">
+<html lang="zh-cn">
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.82.0" /><meta name="theme-color" content="#fff" />
-        <script>
-            const userPrefers = localStorage.getItem('theme');
-            const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-            const lightModeMediaQuery = window.matchMedia('(prefers-color-scheme: light)');
-            if (userPrefers === 'dark') {
-                changeModeMeta('dark');
-            } else if (userPrefers === 'light') {
-                changeModeMeta('light');
-            } else if (darkModeMediaQuery.matches) {
-                changeModeMeta('dark');
-            } else if (lightModeMediaQuery.matches) {
-                changeModeMeta('light');
-            }
-            function changeModeMeta(theme) {
-                document.documentElement.setAttribute('data-theme', theme);
-                if (theme === 'dark') {
-                    changeThemeColor('#16171d');
-                } else {
-                    changeThemeColor('#fff');
-                }
-            }
-            function changeThemeColor(themeColor) {
-                document.querySelector('meta[name="theme-color"]').setAttribute('content', themeColor);
-            }
-        </script>
-
-    
+    <meta name="generator" content="Hugo 0.96.0" /><meta name="theme-color" content="#fff" />
+    <meta name="color-scheme" content="light dark">
 
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -43,23 +17,27 @@
 
     <title>阿里云LNMP环境搭建（一）-在阿里云服务器安装archlinux | 冷夜枫寒</title>
 
-    <link rel="stylesheet" href="/css/meme.min.8993e80f8dfc4f683375512acb83205bc77cb8af120a5f28d0efd4483f631493.css" integrity="sha256-iZPoD438T2gzdVEqy4MgW8d8uK8SCl8o0O/USD9jFJM=" />
+    <link rel="stylesheet" href="/css/meme.min.59ff2778162c93c46d0170552c71466424f4112e97152d3d66e9daf1afc35286.css"/>
+
+    
+    
+        <script src="/js/meme.min.45a777da25d0b1805991f984be4e9ae5e17f3ea94097882dff058256fa34eb17.js"></script>
+
+    
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" media="print" onload="this.media='all'" />
         <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" /></noscript>
 
-    <meta name="author" content="冷夜枫寒" /><meta name="description" content="本文章具有一定时效性，最后更新时间为2019年12月19日星期四，并且会在结尾列出参……
-    
-    " />
+    <meta name="author" content="冷夜枫寒" /><meta name="description" content="本文章具有一定时效性，最后更新时间为2019年12月19日星期四，并且会在结尾列出参……" />
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
     <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="冷夜枫寒" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="application-name" content="冷夜枫寒" />
     <meta name="msapplication-starturl" content="../../" />
@@ -72,16 +50,17 @@
 
     
     <link rel="canonical" href="https://lengyefenghan.top/blogs/2019-12-21-1/" />
+    
 
 <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2019-12-21T09:05:32+00:00",
-        "dateModified": "2021-01-03T13:25:32+08:00",
+        "dateModified": "2022-04-08T18:08:27+08:00",
         "url": "https://lengyefenghan.top/blogs/2019-12-21-1/",
         "headline": "阿里云LNMP环境搭建（一）-在阿里云服务器安装archlinux",
-        "description": "本文章具有一定时效性，最后更新时间为2019年12月19日星期四，并且会在结尾列出参……\n    \n    ",
+        "description": "本文章具有一定时效性，最后更新时间为2019年12月19日星期四，并且会在结尾列出参……",
         "inLanguage" : "zh-cn",
         "articleSection": "blogs",
         "wordCount":  1239 ,
@@ -123,15 +102,13 @@
 
 
 <meta property="og:title" content="阿里云LNMP环境搭建（一）-在阿里云服务器安装archlinux" />
-<meta property="og:description" content="本文章具有一定时效性，最后更新时间为2019年12月19日星期四，并且会在结尾列出参……
-    
-    " />
+<meta property="og:description" content="本文章具有一定时效性，最后更新时间为2019年12月19日星期四，并且会在结尾列出参……" />
 <meta property="og:url" content="https://lengyefenghan.top/blogs/2019-12-21-1/" />
 <meta property="og:site_name" content="冷夜枫寒" />
 <meta property="og:locale" content="zh" /><meta property="og:image" content="https://lengyefenghan.top/icons/lengyefenghan-logo.png" />
     <meta property="og:type" content="article" />
     <meta property="article:published_time" content="2019-12-21T09:05:32&#43;00:00" />
-    <meta property="article:modified_time" content="2021-01-03T13:25:32&#43;08:00" />
+    <meta property="article:modified_time" content="2022-04-08T18:08:27&#43;08:00" />
     
     <meta property="article:section" content="blogs" />
 
@@ -165,15 +142,18 @@
 
 
     
+    
+
+    
 </head>
 
     <body>
         <div class="container">
             
-    <header class="header" data-scroll-header>
+    <header class="header">
         
             <div class="header-wrapper">
-                <div class="header-inner">
+                <div class="header-inner single">
                     
     <div class="site-brand">
         
@@ -195,7 +175,7 @@
             
         
             
-                <li class="menu-item active"><a href="/blogs/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon archive"><path d="M32 448c0 17.7 14.3 32 32 32h384c17.7 0 32-14.3 32-32V160H32v288zm160-212c0-6.6 5.4-12 12-12h104c6.6 0 12 5.4 12 12v8c0 6.6-5.4 12-12 12H204c-6.6 0-12-5.4-12-12v-8zM480 32H32C14.3 32 0 46.3 0 64v48c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16V64c0-17.7-14.3-32-32-32z"/></svg><span class="menu-item-name">文章</span></a>
+                <li class="menu-item"><a href="/blogs/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon archive"><path d="M32 448c0 17.7 14.3 32 32 32h384c17.7 0 32-14.3 32-32V160H32v288zm160-212c0-6.6 5.4-12 12-12h104c6.6 0 12 5.4 12 12v8c0 6.6-5.4 12-12 12H204c-6.6 0-12-5.4-12-12v-8zM480 32H32C14.3 32 0 46.3 0 64v48c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16V64c0-17.7-14.3-32-32-32z"/></svg><span class="menu-item-name">文章</span></a>
                 </li>
             
         
@@ -239,9 +219,9 @@
 
         
 
-        <article class="content post" data-align="justify" data-type="blogs">
+        <article class="content post h-entry" data-align="justify" data-type="blogs">
 
-            <h1 class="post-title">阿里云LNMP环境搭建（一）-在阿里云服务器安装archlinux</h1>
+            <h1 class="post-title p-name">阿里云LNMP环境搭建（一）-在阿里云服务器安装archlinux</h1>
 
             
 
@@ -255,11 +235,11 @@
 <div class="post-meta">
     
         
-        <time datetime="2019-12-21T09:05:32&#43;00:00" class="post-meta-item published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2019.12.21</time>
+        <time datetime="2019-12-21T09:05:32&#43;00:00" class="post-meta-item published dt-published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2019.12.21</time>
     
     
         
-        <time datetime="2021-01-03T13:25:32&#43;08:00" class="post-meta-item modified"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2021.1.3</time>
+        <time datetime="2022-04-08T18:08:27&#43;08:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2022.4.8</time>
     
     
     
@@ -283,26 +263,26 @@
 
             
 
-            <div class="post-body">
-              <p><font color=red >   本文章具有一定时效性，最后更新时间为2019年12月19日星期四，并且会在结尾列出参考文献资料，本篇仅为开篇，后续持续更新，记得关注。</font></p>
+            <div class="post-body e-content">
+                <p><font color=red >   本文章具有一定时效性，最后更新时间为2019年12月19日星期四，并且会在结尾列出参考文献资料，本篇仅为开篇，后续持续更新，记得关注。</font></p>
 <p><font color=green >   LNMP环境是指Linux+nginx+mysql/mariadb+php的web服务器环境 </font></p>
 <p>  文章采用arch发行版是因为本文作者使用arch发行版顺手，新手和常规用户还是建议使用ubuntu等常规发行版</p>
 <h1 id="简单叙述">简单叙述</h1>
 <p>  首先下载archlinux最新版本镜像并且放在根目录</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">wget -o /archiso.iso https://mirrors.tuna.tsinghua.edu.cn/archlinux/iso/latest/archlinux-2019.12.01-x86_64.iso
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">wget -o /archiso.iso https://mirrors.tuna.tsinghua.edu.cn/archlinux/iso/latest/archlinux-2019.12.01-x86_64.iso
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>  然后查看硬盘挂载位置</p>
 <p>  然后修改阿里云grub的引导文件</p>
 <p>  <code>/boot/grub/grub.cfg</code>文件中在第一个menuentry前添加下面的内容</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -316,19 +296,19 @@
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">set</span> <span class="nv">timeout</span><span class="o">=</span><span class="m">30</span>
-
-menuentry <span class="s2">&#34;Archlinux Live (x86_64)&#34;</span> <span class="o">{</span>
-
-    insmod iso9660
-    <span class="nb">set</span> <span class="nv">isofile</span><span class="o">=</span>/archiso.iso
-    loopback lo0 <span class="si">${</span><span class="nv">isofile</span><span class="si">}</span>
-    linux <span class="o">(</span>lo0<span class="o">)</span>/arch/boot/x86_64/vmlinuz <span class="nv">archisolabel</span><span class="o">=</span>ARCH_201912 <span class="nv">img_dev</span><span class="o">=</span>/dev/vda1 <span class="nv">img_loop</span><span class="o">=</span><span class="si">${</span><span class="nv">isofile</span><span class="si">}</span> <span class="nv">earlymodules</span><span class="o">=</span>loop
-    <span class="c1">#其中archisolabel=ARCH_下载镜像的年月</span>
-    <span class="c1">#其中img_dev=原来系统下的硬盘分区挂载位置</span>
-    initrd <span class="o">(</span>lo0<span class="o">)</span>/arch/boot/x86_64/archiso.img
-<span class="o">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nb">set</span> <span class="nv">timeout</span><span class="o">=</span><span class="m">30</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">menuentry <span class="s2">&#34;Archlinux Live (x86_64)&#34;</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    insmod iso9660
+</span></span><span class="line"><span class="cl">    <span class="nb">set</span> <span class="nv">isofile</span><span class="o">=</span>/archiso.iso
+</span></span><span class="line"><span class="cl">    loopback lo0 <span class="si">${</span><span class="nv">isofile</span><span class="si">}</span>
+</span></span><span class="line"><span class="cl">    linux <span class="o">(</span>lo0<span class="o">)</span>/arch/boot/x86_64/vmlinuz <span class="nv">archisolabel</span><span class="o">=</span>ARCH_201912 <span class="nv">img_dev</span><span class="o">=</span>/dev/vda1 <span class="nv">img_loop</span><span class="o">=</span><span class="si">${</span><span class="nv">isofile</span><span class="si">}</span> <span class="nv">earlymodules</span><span class="o">=</span>loop
+</span></span><span class="line"><span class="cl">    <span class="c1">#其中archisolabel=ARCH_下载镜像的年月</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#其中img_dev=原来系统下的硬盘分区挂载位置</span>
+</span></span><span class="line"><span class="cl">    initrd <span class="o">(</span>lo0<span class="o">)</span>/arch/boot/x86_64/archiso.img
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>  然后重启等待进入系统，由于阿里云是vnc界面建议直接根据arch官方wiki的方法安装，其中要注意的包括：</p>
 <p>  1.原系统镜像挂在位于/run/archiso/img_dev</p>
@@ -336,184 +316,184 @@ menuentry <span class="s2">&#34;Archlinux Live (x86_64)&#34;</span> <span class=
 <p>  挂载磁盘：</p>
 <p>  # XEN 平台把 /dev/vda1 替换为 /dev/xvda1</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">mount -o rw,remount /dev/vda1
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">mount -o rw,remount /dev/vda1
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>  # 删除原有系统的文件，注意不要删除 archlinux-2016.04.01-dual.iso</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">cd</span> /run/archiso/img_dev
-
-rm -rf bin boot dev etc ...
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nb">cd</span> /run/archiso/img_dev
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">rm -rf bin boot dev etc ...
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>之后官方安装教程可参考（不适用于新手）：</p>
 <p>官方安装教程：https://wiki.archlinux.org/index.php/Installation_guide</p>
 <h1 id="本人安装记录">本人安装记录</h1>
 <p>1.挂载分区可读写</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">mount -o rw,remount /dev/vda1
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">mount -o rw,remount /dev/vda1
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>2.删除原有分区下多余文件，只留下原有硬盘下的archiso.iso不删除</p>
 <p>3.验证启动方式，我这里验证不支持efi引导</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">ls /sys/firmware/efi/efivars
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ls /sys/firmware/efi/efivars
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>3.重新挂载硬盘到/mnt</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">mount /dev/vda1 /mnt
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">mount /dev/vda1 /mnt
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>4.使用vim修改镜像源</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">vim /etc/pacman.d/mirrorlist
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">vim /etc/pacman.d/mirrorlist
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>5.然后使用vim命令搜索</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">:/tuna
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">:/tuna
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>6.之后查看镜像源为清华源后使用命令将其移动到第一行后</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">:m <span class="m">1</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">:m <span class="m">1</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>7.然后保存退出（使用大写字母ZZ快速保存退出）</p>
 <p>8.之后使用命令安装系统</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">pacstrap /mnt base linux linux-firmware base-devel
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">pacstrap /mnt base linux linux-firmware base-devel
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>9.生成fstab文件</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">genfstab -L /mnt &gt;&gt; /mnt/etc/fstab
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">genfstab -L /mnt &gt;&gt; /mnt/etc/fstab
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>#-L是针对MBR分区表的 -U是针对GPT分区表的</p>
 <p>10.chroot进入系统</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">arch-chroot /mnt
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">arch-chroot /mnt
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>11.配置系统</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">pacman -S grub#安装GRUB
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">pacman -S grub#安装GRUB
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>12.编辑/etc/hostname填入主机名字</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">echo</span> <span class="s2">&#34;hostname&#34;</span> &gt; /etc/hostname
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;hostname&#34;</span> &gt; /etc/hostname
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>13.编辑/etc/hosts修改hosts文件</p>
 <p>14.安装GRUB到硬盘</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">grub-install --target<span class="o">=</span>i386-pc /dev/vda 
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">grub-install --target<span class="o">=</span>i386-pc /dev/vda 
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>15.生成配置文件</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">grub-mkconfig -o /boot/grub/grub.cfg 
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">grub-mkconfig -o /boot/grub/grub.cfg 
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>16.退出chroot环境</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">exit</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nb">exit</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>17.重启电脑</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">Reboot
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">Reboot
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>12.开机后进行下一步配置：</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">systemctl start systemd-networkd#开启网络连接,若没有错误执行下一条命令
-
-systemctl <span class="nb">enable</span> systemd-networkd#设置开机自动开启网络连接
-
-<span class="nb">echo</span> ‘nameserver 223.5.5.5’ &gt; /etc/rsolv.conf#设置dns 一般不需要设置 部分情况下设置了之后会导致网络无法访问
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">systemctl start systemd-networkd#开启网络连接,若没有错误执行下一条命令
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">systemctl <span class="nb">enable</span> systemd-networkd#设置开机自动开启网络连接
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> ‘nameserver 223.5.5.5’ &gt; /etc/rsolv.conf#设置dns 一般不需要设置 部分情况下设置了之后会导致网络无法访问
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>  安装基本到此结束，但是每次链接都需要从阿里云进入服务器控制台，后面会写如何开启配置ssh服务器来进行进一步配置</p>
 <p>参考资料：</p>
@@ -524,21 +504,11 @@ systemctl <span class="nb">enable</span> systemd-networkd#设置开机自动开�
 
             </div>
 
-        </article>
-
-        <ins class="adsbygoogle" style="display:block; text-align:center;"
-    data-ad-client="ca-pub-4304291357650629"
-    data-ad-slot="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></ins>
-<script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-
-        
+            
     
     
         <ul class="post-copyright">
-            <li class="copyright-item author"><span class="copyright-item-text">作者</span>：<a href="https://lengyefenghan.top/" target="_blank" rel="noopener">冷夜枫寒</a></li>
+            <li class="copyright-item author"><span class="copyright-item-text">作者</span>：<a href="https://lengyefenghan.top/" class="p-author h-card" target="_blank" rel="noopener">冷夜枫寒</a></li>
             
                 
                 
@@ -553,11 +523,21 @@ systemctl <span class="nb">enable</span> systemd-networkd#设置开机自动开�
 
 
 
+        </article>
+
+        <ins class="adsbygoogle" style="display:block; text-align:center;"
+    data-ad-client="ca-pub-4304291357650629"
+    data-ad-slot="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
         
     <div class="updated-badge-container">
-        <span title="Updated @ 2021-01-03 13:25:32 CST" style="cursor:help">
+        <span title="Updated @ 2022-04-08 18:08:27 CST" style="cursor:help">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2021-01-03</text><text x="915" y="140" textLength="650" transform="scale(.1)">2021-01-03</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2022-04-08</text><text x="915" y="140" textLength="650" transform="scale(.1)">2022-04-08</text></g></svg>
         </span></div>
 
 
@@ -621,7 +601,7 @@ systemctl <span class="nb">enable</span> systemd-networkd#设置开机自动开�
             
     <footer id="footer" class="footer">
         <div class="footer-inner">
-            <div class="site-info">©&nbsp;2018–2021&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon footer-icon"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>&nbsp;冷夜枫寒</div><div class="powered-by">Powered by <a href="https://github.com/gohugoio/hugo" target="_blank" rel="noopener">Hugo</a> | Theme is <a href="https://github.com/reuixiy/hugo-theme-meme" target="_blank" rel="noopener">MemE</a></div><div class="site-copyright"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></div>
+            <div class="site-info">©&nbsp;2018–2022&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon footer-icon"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>&nbsp;冷夜枫寒</div><div class="powered-by">Powered by <a href="https://github.com/gohugoio/hugo" target="_blank" rel="noopener">Hugo</a> | Theme is <a href="https://github.com/reuixiy/hugo-theme-meme" target="_blank" rel="noopener">MemE</a></div><div class="site-copyright"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></div>
 
             
     
@@ -644,21 +624,9 @@ systemctl <span class="nb">enable</span> systemd-networkd#设置开机自动开�
 
 
         </div>
-        <script src="/js/meme.min.37601e45e81baa82cb10287dfeb2a1b69b31d06e2c49053a565fd3854c0ebe7d.js" integrity="sha256-N2AeRegbqoLLECh9/rKhtpsx0G4sSQU6Vl/ThUwOvn0="></script>
+        
 
-
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-
-<script>
-    var scroll = new SmoothScroll('a[href*="#"]', {
-        speedAsDuration: true,
-        header: '[data-scroll-header]'
-    });
-</script>
-
-
-
-
+        
 
 
 
@@ -670,7 +638,10 @@ systemctl <span class="nb">enable</span> systemd-networkd#设置开机自动开�
     <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
 
 <script>
-    mediumZoom(document.querySelectorAll('div.post-body img'), {
+    let imgNodes = document.querySelectorAll('div.post-body img');
+    imgNodes = Array.from(imgNodes).filter(node => node.parentNode.tagName !== "A");
+
+    mediumZoom(imgNodes, {
         background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
     })
 </script>
@@ -678,10 +649,7 @@ systemctl <span class="nb">enable</span> systemd-networkd#设置开机自动开�
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.min.js" type="module" defer></script>
-
-
-
+    <script src="https://cdn.jsdelivr.net/npm/instant.page@5.1.0/instantpage.min.js" type="module" defer></script>
 
 
 
