@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-cn">
     <title type="text">冷夜枫寒</title>
     <subtitle type="html">冷夜枫寒，一个分享软件、知识的地方。</subtitle>
-    <updated>2022-04-08T18:34:24&#43;08:00</updated>
+    <updated>2022-05-18T11:09:39&#43;08:00</updated>
     <id>https://lengyefenghan.top/</id>
     <link rel="alternate" type="text/html" href="https://lengyefenghan.top/" />
     <link rel="self" type="application/atom&#43;xml" href="https://lengyefenghan.top/atom.xml" />
@@ -14,20 +14,98 @@
             
                 <email>lengyefenghan@dingtalk.com</email>
             </author>
-    <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
-    <generator uri="https://gohugo.io/" version="0.96.0">Hugo</generator>
+    <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)
+</rights>
+    <generator uri="https://gohugo.io/" version="0.98.0">Hugo</generator>
+        <entry>
+            <title type="text">openwrt二级路由开启ipv6</title>
+            <link rel="alternate" type="text/html" href="https://lengyefenghan.top/blogs/2022-05-18-1/" />
+            <id>https://lengyefenghan.top/blogs/2022-05-18-1/</id>
+            <updated>2022-05-18T11:06:24&#43;08:00</updated>
+            <published>2022-05-18T10:16:08&#43;08:00</published>
+            <author>
+                    <name>冷夜枫寒</name>
+                    <uri>https://lengyefenghan.top/</uri>
+                    <email>lengyefenghan@dingtalk.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)
+</rights><summary type="html">起因 因为nas之前用得是frp内网穿透方案，速度慢延迟高，且不稳定，随着ipv6的普……</summary>
+            
+                <content type="html">&lt;h2 id=&#34;起因&#34;&gt;起因&lt;/h2&gt;
+&lt;p&gt;因为nas之前用得是frp内网穿透方案，速度慢延迟高，且不稳定，随着ipv6的普及决定试水ipv6,路由器是新路由3，一堆固件中openwrt ipv6支持较好，所以决定折腾下ipv6&lt;/p&gt;
+&lt;h2 id=&#34;网络环境&#34;&gt;网络环境&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;设备&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;模式&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;光猫&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;路由模式&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;路由器ipv4&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;路由模式&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;路由器ipv6&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;中继模式(relay)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;光猫设置&#34;&gt;光猫设置&lt;/h2&gt;
+&lt;p&gt;一般情况下光猫默认ipv4,可以手动设置拨号模式为ipv4&amp;amp;ipv6 或者直接致电运营商要求开启ipv6
+&lt;br&gt;检查方式:电脑确认没有关闭ipv6
+&lt;br&gt;&lt;img src=&#34;https://lengyefenghan.top/images/2022-05-18-1/win_enable_ipv6.png&#34; alt=&#34;win10 ipv6&#34;&gt;
+&lt;br&gt;然后在网络属性查看是否有240开头的ipv6地址
+&lt;br&gt;&lt;img src=&#34;https://lengyefenghan.top/images/2022-05-18-1/win_ipv6_status.png&#34; alt=&#34;win10 ipv6状态&#34;&gt;
+&lt;br&gt;到此光猫的设置就完成了&lt;/p&gt;
+&lt;h2 id=&#34;路由器设置&#34;&gt;路由器设置&lt;/h2&gt;
+&lt;h3 id=&#34;wan6接口设置&#34;&gt;WAN6接口设置&lt;/h3&gt;
+&lt;p&gt;路由器是新路由三，固件是openwrt官方固件
+&lt;br&gt;检查openwrt接口,如果没有wan6口需要新建一个，类型为dhcpv6客户端，接口指向WAN
+&lt;br&gt;&lt;img src=&#34;https://lengyefenghan.top/images/2022-05-18-1/c_wan6.png&#34; alt=&#34;创建WAN6接口&#34;&gt;
+&lt;br&gt;设置请求类型为try，前缀获取为自动
+&lt;br&gt;&lt;img src=&#34;https://lengyefenghan.top/images/2022-05-18-1/wan6_cg.png&#34; alt=&#34;设置类型为dhcpv6客户端&#34;&gt;
+&lt;br&gt;配置防火墙到wan
+&lt;br&gt;&lt;img src=&#34;https://lengyefenghan.top/images/2022-05-18-1/wan6_fw.png&#34; alt=&#34;配置防火墙到wan&#34;&gt;
+&lt;br&gt;设置dhcp服务ipv6开启,ipv4忽略，全部设置为中继，且勾选主接口
+&lt;br&gt;&lt;img src=&#34;https://lengyefenghan.top/images/2022-05-18-1/wan6_dhcpv6s.png&#34; alt=&#34;配置防火墙到wan&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;lan接口设置&#34;&gt;LAN接口设置&lt;/h3&gt;
+&lt;p&gt;路由器lan口其他设置不变，单独更改dhcp为中继
+&lt;br&gt;&lt;img src=&#34;https://lengyefenghan.top/images/2022-05-18-1/lan-v6.png&#34; alt=&#34;设置lan口dhcpv6&#34;&gt;
+&lt;font color=&#34;red&#34;&gt;如果这时无法获取到ipv6地址，或者无法连接，尝试重启路由后无用请执行:在lan&amp;gt;高级设置&amp;gt;ipv6分配长度更改为64&lt;/font&gt;
+&lt;br&gt;&lt;img src=&#34;https://lengyefenghan.top/images/2022-05-18-1/lan_v6_64.png&#34; alt=&#34;设置lan口前缀&#34;&gt;&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">在Archlinux下安装nextcloud</title>
             <link rel="alternate" type="text/html" href="https://lengyefenghan.top/blogs/2022-04-08-1/" />
             <id>https://lengyefenghan.top/blogs/2022-04-08-1/</id>
-            <updated>2022-04-08T18:33:42&#43;08:00</updated>
+            <updated>2022-05-18T08:56:37&#43;08:00</updated>
             <published>2022-04-08T18:32:37&#43;08:00</published>
             <author>
                     <name>冷夜枫寒</name>
                     <uri>https://lengyefenghan.top/</uri>
                     <email>lengyefenghan@dingtalk.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">概述 之前使用Alpine作为系统安装nextcloud但是手贱更新了下然后炸了，经过……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)
+</rights><summary type="html">概述 之前使用Alpine作为系统安装nextcloud但是手贱更新了下然后炸了，经过……</summary>
             
                 <content type="html">&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
 &lt;p&gt;之前使用Alpine作为系统安装nextcloud但是手贱更新了下然后炸了，经过两天的不断尝试，最后决定使用自己比较熟悉的Archlinux作为底层系统来搭建nextcloud服务器
@@ -549,14 +627,15 @@ extension=igbinary.so
             <title type="text">Go 通过windows wmi获取系统信息</title>
             <link rel="alternate" type="text/html" href="https://lengyefenghan.top/blogs/2021-04-21/" />
             <id>https://lengyefenghan.top/blogs/2021-04-21/</id>
-            <updated>2022-04-08T18:08:27&#43;08:00</updated>
+            <updated>2022-05-18T08:56:37&#43;08:00</updated>
             <published>2021-04-21T08:56:32&#43;08:00</published>
             <author>
                     <name>冷夜枫寒</name>
                     <uri>https://lengyefenghan.top/</uri>
                     <email>lengyefenghan@dingtalk.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">wmi是什么 WMI，是Windows 2K/XP管理系统的核心；对于其他的Win32操……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)
+</rights><summary type="html">wmi是什么 WMI，是Windows 2K/XP管理系统的核心；对于其他的Win32操……</summary>
             
                 <content type="html">&lt;h1 id=&#34;wmi是什么&#34;&gt;wmi是什么&lt;/h1&gt;
 &lt;p&gt;WMI，是Windows 2K/XP管理系统的核心；对于其他的Win32操作系统，WMI是一个有用的插件。WMI以CIMOM为基础，CIMOM即公共信息模型对象管理器（Common Information Model Object Manager），是一个描述操作系统构成单元的对象数据库，为MMC和脚本程序提供了一个访问操作系统构成单元的公共接口。有了WMI，工具软件和脚本程序访问操作系统的不同部分时不需要使用不同的API；相反，操作系统的不同部分都可以插入WMI，如图所示，工具软件和脚本程序可以方便地读写WMI。&lt;/p&gt;
@@ -751,14 +830,15 @@ extension=igbinary.so
             <title type="text">go-sciter踩坑记录</title>
             <link rel="alternate" type="text/html" href="https://lengyefenghan.top/blogs/2021-03-23/" />
             <id>https://lengyefenghan.top/blogs/2021-03-23/</id>
-            <updated>2022-04-08T18:08:27&#43;08:00</updated>
+            <updated>2022-05-18T08:56:37&#43;08:00</updated>
             <published>2021-03-23T13:39:08&#43;08:00</published>
             <author>
                     <name>冷夜枫寒</name>
                     <uri>https://lengyefenghan.top/</uri>
                     <email>lengyefenghan@dingtalk.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">已经解决 css宽度100%异常问题： width: *; 用星号代替即可 出现tis css html 等无法load //xx.xx……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)
+</rights><summary type="html">已经解决 css宽度100%异常问题： width: *; 用星号代替即可 出现tis css html 等无法load //xx.xx……</summary>
             
                 <content type="html">&lt;h2 id=&#34;已经解决&#34;&gt;已经解决&lt;/h2&gt;
 &lt;ol&gt;
@@ -959,14 +1039,15 @@ extension=igbinary.so
             <title type="text">泰拉瑞亚修改器</title>
             <link rel="alternate" type="text/html" href="https://lengyefenghan.top/blogs/terraria-edit-win/" />
             <id>https://lengyefenghan.top/blogs/terraria-edit-win/</id>
-            <updated>2022-04-08T18:08:27&#43;08:00</updated>
+            <updated>2022-05-18T08:56:37&#43;08:00</updated>
             <published>2021-02-01T04:36:12&#43;00:00</published>
             <author>
                     <name>冷夜枫寒</name>
                     <uri>https://lengyefenghan.top/</uri>
                     <email>lengyefenghan@dingtalk.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">关于软件 泰拉瑞亚修改器，适配steam版本，这个页面的只支持windows系统 每个版……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)
+</rights><summary type="html">关于软件 泰拉瑞亚修改器，适配steam版本，这个页面的只支持windows系统 每个版……</summary>
             
                 <content type="html">&lt;h3 id=&#34;关于软件&#34;&gt;关于软件&lt;/h3&gt;
 &lt;p&gt;泰拉瑞亚修改器，适配steam版本，这个页面的只支持windows系统
@@ -1022,14 +1103,15 @@ extension=igbinary.so
             <title type="text">算法与数据结果绪论-01-什么是数据结构</title>
             <link rel="alternate" type="text/html" href="https://lengyefenghan.top/blogs/2021-01-19/" />
             <id>https://lengyefenghan.top/blogs/2021-01-19/</id>
-            <updated>2022-04-08T18:08:27&#43;08:00</updated>
+            <updated>2022-05-18T08:56:37&#43;08:00</updated>
             <published>2021-01-19T22:05:39&#43;08:00</published>
             <author>
                     <name>冷夜枫寒</name>
                     <uri>https://lengyefenghan.top/</uri>
                     <email>lengyefenghan@dingtalk.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">算法与数据结构-01-绪论 什么是数据结构 数据结构是一门研究非数值计算的程序设计问题中……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)
+</rights><summary type="html">算法与数据结构-01-绪论 什么是数据结构 数据结构是一门研究非数值计算的程序设计问题中……</summary>
             
                 <content type="html">&lt;h1 id=&#34;算法与数据结构-01-绪论&#34;&gt;算法与数据结构-01-绪论&lt;/h1&gt;
 &lt;h2 id=&#34;什么是数据结构&#34;&gt;什么是数据结构&lt;/h2&gt;
@@ -1073,14 +1155,15 @@ extension=igbinary.so
             <title type="text">想不想修真虚拟大师飞天辅助教程</title>
             <link rel="alternate" type="text/html" href="https://lengyefenghan.top/blogs/2021-01-03/" />
             <id>https://lengyefenghan.top/blogs/2021-01-03/</id>
-            <updated>2022-04-08T18:16:06&#43;08:00</updated>
+            <updated>2022-05-18T08:56:37&#43;08:00</updated>
             <published>2021-01-03T12:13:00&#43;08:00</published>
             <author>
                     <name>冷夜枫寒</name>
                     <uri>https://lengyefenghan.top/</uri>
                     <email>lengyefenghan@dingtalk.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">2022-04-08 由于飞天不再可用，请换其他辅助 环境准备 需要下载的app： vmospro (手机自带应用商店搜索)……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)
+</rights><summary type="html">2022-04-08 由于飞天不再可用，请换其他辅助 环境准备 需要下载的app： vmospro (手机自带应用商店搜索)……</summary>
             
                 <content type="html">&lt;h1 id=&#34;2022-04-08&#34;&gt;2022-04-08&lt;/h1&gt;
 &lt;p&gt;由于飞天不再可用，请换其他辅助&lt;/p&gt;
@@ -1161,14 +1244,15 @@ extension=igbinary.so
             <title type="text">Linux游戏-星界边境</title>
             <link rel="alternate" type="text/html" href="https://lengyefenghan.top/blogs/linuxgamecn-starbound/" />
             <id>https://lengyefenghan.top/blogs/linuxgamecn-starbound/</id>
-            <updated>2022-04-08T18:08:27&#43;08:00</updated>
+            <updated>2022-05-18T08:56:37&#43;08:00</updated>
             <published>2020-07-05T09:26:16&#43;08:00</published>
             <author>
                     <name>冷夜枫寒</name>
                     <uri>https://lengyefenghan.top/</uri>
                     <email>lengyefenghan@dingtalk.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">游戏简介 《星界边境(Starbound)》是一款2D像素点风格，科幻背景的沙盒游戏，……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)
+</rights><summary type="html">游戏简介 《星界边境(Starbound)》是一款2D像素点风格，科幻背景的沙盒游戏，……</summary>
             
                 <content type="html">&lt;h2 id=&#34;游戏简介&#34;&gt;游戏简介&lt;/h2&gt;
 &lt;p&gt;《星界边境(Starbound)》是一款2D像素点风格，科幻背景的沙盒游戏，游戏在风格上有些类似于《泰拉瑞亚(Terraria)》和《我的世界(minecraft)》。&lt;/p&gt;
@@ -1269,14 +1353,15 @@ extension=igbinary.so
             <title type="text">archlinux从aur源编译yay</title>
             <link rel="alternate" type="text/html" href="https://lengyefenghan.top/blogs/2020-01-20/" />
             <id>https://lengyefenghan.top/blogs/2020-01-20/</id>
-            <updated>2022-04-08T18:08:27&#43;08:00</updated>
+            <updated>2022-05-18T08:56:37&#43;08:00</updated>
             <published>2020-01-20T10:02:20&#43;00:00</published>
             <author>
                     <name>冷夜枫寒</name>
                     <uri>https://lengyefenghan.top/</uri>
                     <email>lengyefenghan@dingtalk.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">aur全称Arch User Repository，是为用户而建、由用户主导的 Arch 软件仓库。AU……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)
+</rights><summary type="html">aur全称Arch User Repository，是为用户而建、由用户主导的 Arch 软件仓库。AU……</summary>
             
                 <content type="html">&lt;p&gt;&lt;font color=red&gt;  aur全称Arch User Repository，是为用户而建、由用户主导的 Arch 软件仓库。AUR 中的软件包以软件包生成脚本（PKGBUILD）的形式提供，用户自己通过 makepkg 生成包，再由 pacman 安装。创建 AUR 的初衷是方便用户维护和分享新软件包，并由官方定期从中挑选软件包进入 community 仓库。本文介绍用户访问和使用 AUR 的方法。&lt;/font&gt;&lt;/p&gt;
 &lt;p&gt;  早期在arch的官方源里面包含了aur的管理器，方便安装aur源的软件，但是近期的更新中把aur源的管理器逐渐从官方源移回了aur，也就是需要自己编译安装，这里就举例安装yay，之后使用yay安装软件。&lt;/p&gt;
@@ -1352,14 +1437,15 @@ extension=igbinary.so
             <title type="text">阿里云LNMP环境搭建（三）-搭建lnmp并测试</title>
             <link rel="alternate" type="text/html" href="https://lengyefenghan.top/blogs/2019-12-21-3/" />
             <id>https://lengyefenghan.top/blogs/2019-12-21-3/</id>
-            <updated>2022-04-08T18:08:27&#43;08:00</updated>
+            <updated>2022-05-18T08:56:37&#43;08:00</updated>
             <published>2019-12-21T11:39:56&#43;00:00</published>
             <author>
                     <name>冷夜枫寒</name>
                     <uri>https://lengyefenghan.top/</uri>
                     <email>lengyefenghan@dingtalk.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">本文章具有一定时效性，最后更新时间为2019年12月20日星期五，并且会在结尾列出参……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)
+</rights><summary type="html">本文章具有一定时效性，最后更新时间为2019年12月20日星期五，并且会在结尾列出参……</summary>
             
                 <content type="html">&lt;p&gt;&lt;font color=red&gt;  本文章具有一定时效性，最后更新时间为2019年12月20日星期五，并且会在结尾列出参考文献资料，本篇仅为后篇，后续更新其他相关，记得关注。&lt;/font&gt;&lt;/p&gt;
 &lt;p&gt;1.安装nginx php mariadb&lt;/p&gt;
@@ -2276,14 +2362,15 @@ extension=igbinary.so
             <title type="text">阿里云LNMP环境搭建（二）-配置archlinux</title>
             <link rel="alternate" type="text/html" href="https://lengyefenghan.top/blogs/2019-12-21-2/" />
             <id>https://lengyefenghan.top/blogs/2019-12-21-2/</id>
-            <updated>2022-04-08T18:08:27&#43;08:00</updated>
+            <updated>2022-05-18T08:56:37&#43;08:00</updated>
             <published>2019-12-21T10:29:36&#43;00:00</published>
             <author>
                     <name>冷夜枫寒</name>
                     <uri>https://lengyefenghan.top/</uri>
                     <email>lengyefenghan@dingtalk.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">本文章具有一定时效性，最后更新时间为2019年12月20日星期五，并且会在结尾列出参……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)
+</rights><summary type="html">本文章具有一定时效性，最后更新时间为2019年12月20日星期五，并且会在结尾列出参……</summary>
             
                 <content type="html">&lt;p&gt;&lt;font color=red&gt;  本文章具有一定时效性，最后更新时间为2019年12月20日星期五，并且会在结尾列出参考文献资料，本篇仅为中篇，后续持续更新，记得关注。&lt;/font&gt;&lt;/p&gt;
 &lt;p&gt;1.首先要配置的是ssh&lt;/p&gt;
@@ -2461,14 +2548,15 @@ extension=igbinary.so
             <title type="text">阿里云LNMP环境搭建（一）-在阿里云服务器安装archlinux</title>
             <link rel="alternate" type="text/html" href="https://lengyefenghan.top/blogs/2019-12-21-1/" />
             <id>https://lengyefenghan.top/blogs/2019-12-21-1/</id>
-            <updated>2022-04-08T18:08:27&#43;08:00</updated>
+            <updated>2022-05-18T08:56:37&#43;08:00</updated>
             <published>2019-12-21T09:05:32&#43;00:00</published>
             <author>
                     <name>冷夜枫寒</name>
                     <uri>https://lengyefenghan.top/</uri>
                     <email>lengyefenghan@dingtalk.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">本文章具有一定时效性，最后更新时间为2019年12月19日星期四，并且会在结尾列出参……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)
+</rights><summary type="html">本文章具有一定时效性，最后更新时间为2019年12月19日星期四，并且会在结尾列出参……</summary>
             
                 <content type="html">&lt;p&gt;&lt;font color=red &gt;   本文章具有一定时效性，最后更新时间为2019年12月19日星期四，并且会在结尾列出参考文献资料，本篇仅为开篇，后续持续更新，记得关注。&lt;/font&gt;&lt;/p&gt;
 &lt;p&gt;&lt;font color=green &gt;   LNMP环境是指Linux+nginx+mysql/mariadb+php的web服务器环境 &lt;/font&gt;&lt;/p&gt;
