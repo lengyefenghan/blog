@@ -6,7 +6,7 @@ title = "lengyefenghan"
 languageCode = "zh-cn"
 hasCJKLanguage = true
 # 版权信息（支持 Markdown）
-copyright = "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)<br>"
+copyright = "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)<br><a href='https://ipw.cn/ipv6webcheck/' target='_blank'><img style='display:inline-block;vertical-align:middle;' src=\"https://static.ipw.cn/icon/ipv6-s1.svg\"></a>"
 
 # 主题选择
 theme = "meme"
