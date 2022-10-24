@@ -6,7 +6,7 @@ title = "lengyefenghan"
 languageCode = "zh-cn"
 hasCJKLanguage = true
 # 版权信息（支持 Markdown）
-copyright = "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)<br><a href='https://ipw.cn/ipv6webcheck/' target='_blank'><img style='display:inline-block;vertical-align:middle;' src=\"https://static.ipw.cn/icon/ipv6-s1.svg\"></a>"
+copyright = "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)"
 
 # 主题选择
 theme = "meme"
@@ -157,78 +157,15 @@ uglyURLs = false
     home = ["HTML", "SectionsAtom", "SectionsRSS"]
     section = ["HTML"]
     # 类别
-    taxonomyTerm = ["HTML"]
+    #taxonomyTerm = ["HTML"]
     # 类别项
     taxonomy = ["HTML"]
-    # 说明：https://github.com/gohugoio/hugo/issues/4528#issuecomment-508488859
+    term = ["HTML"]
+    
 
 # RSS & Atom 文章数限制
 [services.rss]
     limit = -1
-
-
-
-##########################################
-# 菜单配置
-
-# MemE 主题支持以下四种菜单：
-# 1. main       顶栏下方（居中布局）或里面（弹性
-#               布局）的菜单栏
-# 2. home       首页的底部链接（适用于「诗意
-#               人生」和「视频片段」布局）
-# 3. socials    社交栏（关于页面的极简页脚）
-# 4. links      链接栏（关于页面的极简页脚）
-
-# 菜单内的配置说明如下：
-# url           链接地址
-# name          文本（留空（""）则无）
-# weight        位置
-# pre           内链（internal）或外链（external）
-# post          图标（留空（""）则无）
-# identifier    图标的 Class 名
-#               （对于弹性布局的顶栏有两个特殊
-#               的值：`theme-switcher`、
-#               `lang-switcher`）
-
-# [menu]
-#     ## 菜单栏
-#     # [[menu.main]]
-#     #     url = "/"
-#     #     name = "首页"
-#     #     weight = 1
-#     #     pre = "internal"
-#     #     post = "home"
-#     [[menu.main]]
-#         url = "/posts/"
-#         name = "文章"
-#         weight = 2
-#         pre = "internal"
-#         post = "archive"
-#     [[menu.main]]
-#         url = "/categories/"
-#         name = "分类"
-#         weight = 3
-#         pre = "internal"
-#         post = "th"
-#     [[menu.main]]
-#         url = "/tags/"
-#         name = "标签"
-#         weight = 4
-#         pre = "internal"
-#         post = "tags"
-#     [[menu.main]]
-#         url = "/about/"
-#         name = "关于"
-#         weight = 5
-#         pre = "internal"
-#         post = "user-circle"
-#     [[menu.main]]
-#         weight = 6
-#         identifier = "theme-switcher"
-#     [[menu.main]]
-#         weight = 7
-#         identifier = "lang-switcher"
-
 
 
 ##########################################
@@ -240,6 +177,10 @@ uglyURLs = false
 
     # 是否开启
     enableHeader = true
+
+    # 是否自动隐藏
+    enableHeaderAutoHide = false
+    # 说明：仅对弹性布局的顶栏有效
 
     # 是否在首页显示
     displayHeaderInHome = true
@@ -253,14 +194,6 @@ uglyURLs = false
     # 顶栏布局
     headerLayout = "flex"
     # 说明：居中布局（center）或弹性布局（flex）
-
-    # 顶栏宽度的回退值
-    headerFallbackWidth = "36em"
-    # 说明：默认情况，MemE 使用 main-inner 元素
-    #      的宽度作为顶栏宽度，但是在一些页面（比
-    #      如「诗意人生」和「视频片段」布局的首页），
-    #      不存在 main-inner 元素，所以你需要为
-    #      这种情况给一个回退值。
 
     # 在窄视图下隐藏菜单栏并显示一个按钮？
     enableNavToggle = true
@@ -348,7 +281,7 @@ uglyURLs = false
     #      Open Graph、Atom、RSS
     # 站点的关键词
 
-    siteKeywords = ["冷夜楓寒","软件分分享","冷夜枫寒","lengyefenghan"]
+    siteKeywords = ["冷夜楓寒","软件分分享","冷夜枫寒","lengyefenghan","大螃蟹猫"]
     # 说明：如果留空（[]），则会取站点的所有类别名、分
     #      区名（如果按分区分类）作为默认值
 
@@ -509,6 +442,9 @@ uglyURLs = false
     #      话。类似，如果你开启深色模式并将默认
     #      模式修改为它，即使你隐藏开关，你的读
     #      者依然可能以浅色模式模式阅读你的博客。
+        #      除非，你开启下方这个选项。
+
+    overrideSystemPreferences = false
 
 
     ######################################
@@ -566,7 +502,7 @@ uglyURLs = false
     # KaTeX 公式支持（包括化学方程式）
 
     # 是否开启（全局设置）
-    enableKaTeX = false
+    enableKaTeX = true
     # 说明：文章的 Front Matter 中的 `katex`
     #      的优先级高于此处
 
@@ -575,12 +511,12 @@ uglyURLs = false
     # MathJax 公式支持（包括化学方程式）
 
     # 是否开启（全局设置）
-    enableMathJax = false
+    enableMathJax = true
     # 说明：文章的 Front Matter 中的 `mathjax`
     #      的优先级高于此处
 
     # 是否禁用 MathJax 的右键菜单
-    disableMathJaxMenu = false
+    disableMathJaxMenu = true
 
 
     ######################################
@@ -590,6 +526,9 @@ uglyURLs = false
     enableMermaid = false
     # 说明：文章的 Front Matter 中的 `mermaid`
     #      的优先级高于此处
+
+    mermaidTheme = 'default'
+    mermaidThemeDark = 'dark'
 
 
     ######################################
@@ -602,10 +541,33 @@ uglyURLs = false
     # 说明：文章的 Front Matter 中的 `comments`
     #      的优先级高于此处
 
+    # 直接加载评论，不需要手动点击按钮加载
+    autoLoadComments = false
+
     ## Disqus
     enableDisqus = false
     disqusShortname = ""
 
+    ## Valine
+    enableValine = false
+    valineAppId = "tJqi9bLiK2zTJoyNd7YqE81g-gzGzoHsz"
+    valineAppKey = "iUsdP93uyE4M2onI86WBl4rw"
+    valinePlaceholder = "Just go go"
+    valinePath = ""
+    valineAvatar = "mm"
+    valineMeta = ["nick", "mail", "link"]
+    valinePageSize = 10
+    valineLang = "zh-cn"
+    valineVisitor = false
+    valineHighlight = true
+    valineAvatarForce = false
+    valineRecordIP = false
+    valineServerURLs = ""
+    valineEmojiCDN = ""
+    valineEmojiMaps = {}
+    valineEnableQQ = true
+    valineRequiredFields = []
+    # 说明：https://valine.js.org/
 
     ## Utterances
     enableUtterances = false
@@ -774,22 +736,22 @@ uglyURLs = false
     #      的优先级高于此处
 
     # 是否显示目录标题
-    displayTOCTitle = false
+    displayTOCTitle = true
 
     # 是否显示数字（全局设置）
-    displayTOCNum = false
+    displayTOCNum = true
     # 说明：文章的 Front Matter 中的 `tocNum`
     #      的优先级高于此处
 
     # 是否链接文章的分节标题到目录
-    linkHeadingsToTOC = false
+    linkHeadingsToTOC = true
 
 
     ######################################
     # 分节标题锚点
 
     # 是否开启
-    enableHeadingsAnchor = false
+    enableHeadingsAnchor = true
 
     # 分节标题的级别范围
     headingsOpt = "1-6"
@@ -1193,6 +1155,7 @@ uglyURLs = false
     # 是否在首页显示
     displayFooterInHome = true
 
+    displayCopyleftSymbol = false
     # 是否显示版权符号（©）
     displayCopyrightSymbol = true
 
@@ -1207,7 +1170,7 @@ uglyURLs = false
     iconAnimation = true
 
     # 是否显示 Hugo 和 MemE 的链接
-    displayPoweredBy = false
+    displayPoweredBy = true
 
     # 是否显示站点的版权信息
     displaySiteCopyright = true
@@ -1215,7 +1178,7 @@ uglyURLs = false
     # 自定义页脚（支持 Markdown）
     customFooter = ""
 
-    displayBusuanziSiteUVAndPV = true
+    displayBusuanziSiteUVAndPV = false
     busuanziSiteUVText = "本站访客数"
     busuanziSiteUVIcon = "user"
     busuanziSitePVText = "本站访问量"
@@ -1287,7 +1250,7 @@ uglyURLs = false
     # 说明：仅在生产环境（production）下渲染
 
     # 是否开启
-    enableForceHTTPS = true
+    enableForceHTTPS = false
     # 说明：使用 JavaScript 来实现跳转。如果你
     #      的服务器不支持强制 HTTPS 跳转，则可
     #      开启此选项。
@@ -1316,6 +1279,30 @@ uglyURLs = false
 
 
     ######################################
+    # Lunr 搜索（暂不支持中文）
+
+    # 说明：需要开启 `SearchIndex` 的输出
+
+    enableLunrSearch = false
+    # 说明：https://lunrjs.com/
+
+
+    ######################################
+    # Algolia search
+
+    # 说明：需要开启 `Algolia` 的输出，且需要每
+    #      次将生成的 algolia.json 文件上传到
+    #      Algolia
+
+    enableAlgoliaSearch = false
+
+    algoliaAppId = ""
+    algoliaApiKey = ""
+    algoliaIndexName = ""
+    # 说明：https://www.algolia.com/
+
+
+    ######################################
     # 404 页面
 
     # 视频封面
@@ -1325,3 +1312,36 @@ uglyURLs = false
     fofVideoWebm = ""
     fofVideoMp4 = ""
     # 说明：视频地址可留空（""）
+
+
+    ######################################
+    # 定制第三方库的地址
+
+    [params.lib]
+        host = "https://cdn.jsdelivr.net"
+        # 说明：设置为根（"/"）且将下方对应 path
+        #      设置，如果你想要直接从「本地」
+        #      加载某个库的话。比如：
+        #      将 path 设置为 "js/lib.min.js"，
+        #      并将文件放到你的 /static/js/lib.min.js
+    [params.lib.path]
+        clipboard = "/npm/clipboard-polyfill@2.8.6/dist/clipboard-polyfill.min.js"
+        instantsearch = "/npm/instantsearch.js@2/dist/instantsearch.min.js"
+        #gitalk = "/npm/gitalk@1/dist/gitalk.min.js"
+        #gitalk_css = "/npm/gitalk@1/dist/gitalk.css"
+        instantpage = "/npm/instant.page@5.1.0/instantpage.min.js"
+        katex = "/npm/katex@0.13.0/dist/katex.min.js"
+        katex_css = "/npm/katex@0.13.0/dist/katex.min.css"
+        katex_mhchem = "/npm/katex@0.13.0/dist/contrib/mhchem.min.js"
+        katex_auto_render = "/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+        lunr = "/npm/lunr@2.3.9/lunr.min.js"
+        lunr_tinyseg = "/npm/lunr-languages@1.4.0/tinyseg.js"
+        lunr_stemmer = "/npm/lunr-languages@1.4.0/min/lunr.stemmer.support.min.js"
+        lunr_lang = "/npm/lunr-languages@1.4.0/min/lunr.de.min.js"
+        mathjax = "/npm/mathjax@3.1.2/es5/tex-mml-chtml.js"
+        medium_zoom = "/npm/medium-zoom@latest/dist/medium-zoom.min.js"
+        mermaid = "/npm/mermaid@8.8.3/dist/mermaid.min.js"
+        qrcode = "/npm/qrcode-generator@1.4.4/qrcode.min.js"
+        valine = "/npm/valine@1.4.14/dist/Valine.min.js"
+        busuanzi = "https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
+        utterances = "https://utteranc.es/client.js"
