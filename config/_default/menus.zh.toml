@@ -18,23 +18,30 @@
         pre = "internal"
         post = "grav"
     [[main]]
+         url = "/categories/"
+         name = "分类"
+         weight = 4
+         pre = "internal"
+         post = "th"
+    [[main]]
+        url = "/tags/"
+         name = "标签"
+         weight = 5
+         pre = "internal"
+         post = "tags"
+    [[main]]
         url = "/links/"
         name = "链接"
-        weight = 4
+        weight = 6
         pre = "internal"
         post = "link"
     [[main]]
         url = "/about/"
         name = "关于"
-        weight = 5
+        weight = 7
         pre = "internal"
         post = "user-circle"
-    # [[main]]
-    #     url = "/zh-tw/"
-    #     name = "繁體中文"
-    #     weight = 6
-    #     pre = "internal"
-    #     post = ""
+
 
 # [[main]]
 #   identifier = "docs"

@@ -1,6 +1,9 @@
 ---
 title: "泰拉瑞亚修改器"
 date: 2021-02-01T04:36:12Z
+tags: ["CE","Game"]
+series: ["Game"]
+categories: ["Game"]
 ---
 
 ### 关于软件

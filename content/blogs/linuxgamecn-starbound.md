@@ -2,6 +2,9 @@
 title: "Linux游戏-星界边境"
 date: 2020-07-05T09:26:16+08:00
 draft: false
+tags: ["Archlinux","Game"]
+series: ["Game"]
+categories: ["Game"]
 ---
 
 ## 游戏简介

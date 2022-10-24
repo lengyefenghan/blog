@@ -14,16 +14,16 @@
 
 [[socials]]
     id = "email"
-    url = "lengyefenghan@dingtalk.com"
+    url = "lengyefenghan@outlook.com"
     icon = "envelope"
     title = "Email"
     weight = 2
 
 [[socials]]
-    id = "github"
-    url = "https://github.com/lengyefenghan"
+    id = "gitea"
+    url = "https://gitea.lengyefenghan.top/lengyefenghan"
     icon = "github"
-    title = "GitHub"
+    title = "Gitea"
     weight = 3
 
 # [[socials]]
@@ -33,9 +33,9 @@
 #     title = "Twitter"
 #     weight = 4
 
-[[socials]]
-    id = "telegram"
-    url = "https://t.me/lengyefenghan"
-    icon = "telegram"
-    title = "Telegram"
-    weight = 4
+#[[socials]]
+#    id = "telegram"
+#    url = "https://t.me/lengyefenghan"
+#    icon = "telegram"
+#    title = "Telegram"
+#    weight = 4

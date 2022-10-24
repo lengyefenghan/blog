@@ -13,7 +13,7 @@ copyright = "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0
     # 名字
     name = "冷夜枫寒"
     # 邮箱
-    email = "lengyefenghan@dingtalk.com"
+    email = "lengyefenghan@outlook.com"
     # 座右铭或简介
     motto = "Dream it prossble!"
     # 头像
@@ -21,7 +21,7 @@ copyright = "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0
     # 网站（默认值：baseURL）
     website = "https://lengyefenghan.top/"
     # 推特
-    twitter = "lengyefenghan"
+    #twitter = "lengyefenghan"
 
 ## 首页布局
     # MemE 主题有以下四种首页布局：
@@ -30,12 +30,12 @@ copyright = "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0
     # 3. posts     文章摘要
     # 4. page      普通页面
 
-    homeLayout = "poetry"
+    homeLayout = "posts"
 
     ## 「诗意人生」
     # 诗句，支持 Markdown
     ###指引文件
-    homePoetry = ["霅溪湾里钓渔翁，舴艋为家西复东。","江上雪，浦边风，笑著荷衣不叹穷。","松江蟹舍主人欢，菰饭莼羹亦共餐。","枫叶落，荻花乾，醉宿渔舟不觉寒。","青草湖中月正圆，巴陵渔父棹歌连。","钓车子，掘头船，乐在风波不用仙。"]
+    #homePoetry = ["霅溪湾里钓渔翁，舴艋为家西复东。","江上雪，浦边风，笑著荷衣不叹穷。","松江蟹舍主人欢，菰饭莼羹亦共餐。","枫叶落，荻花乾，醉宿渔舟不觉寒。","青草湖中月正圆，巴陵渔父棹歌连。","钓车子，掘头船，乐在风波不用仙。"]
     # 底部链接的内间距，单位：em
     homeLinksPadding = 1
 
@@ -61,7 +61,7 @@ copyright = "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0
     # 注意：请保持此格式，更改数字
 
     # 站点的推特帐号
-    siteTwitter = "lengyefenghan"
+    #siteTwitter = "lengyefenghan"
     # 说明：用于 Twitter Cards
 
 ## Google Analytics

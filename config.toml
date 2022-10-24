@@ -98,7 +98,7 @@ uglyURLs = false
     # 名字
     name = "冷夜枫寒"
     # 邮箱
-    email = "lengyefenghan@dingtalk.com"
+    email = "lengyefenghan@outlook.com"
     # 座右铭或简介
     motto = "Dream it prossble!"
     # 头像
@@ -106,7 +106,7 @@ uglyURLs = false
     # 网站（默认值：baseURL）
     website = "https://lengyefenghan.top/"
     # 推特
-    twitter = "lengyefenghan"
+    #twitter = ""
 
 # 相关文章
 [related]
@@ -242,11 +242,12 @@ uglyURLs = false
     enableHeader = true
 
     # 是否在首页显示
-    displayHeaderInHome = false
+    displayHeaderInHome = true
     # 说明：对弹性布局的顶栏无效
 
     # 背景
-    headerBackground = "linear-gradient(90deg, #f795331a 0, #f370551a 15%, #ef4e7b1a 30%, #a166ab1a 44%, #5073b81a 58%, #1098ad1a 72%, #07b39b1a 86%, #6dba821a 100%)"
+    #headerBackground = "linear-gradient(90deg, #f795331a 0, #f370551a 15%, #ef4e7b1a 30%, #a166ab1a 44%, #5073b81a 58%, #1098ad1a 72%, #07b39b1a 86%, #6dba821a 100%)"
+    headerBackground = "linear-gradient(90deg, #9400D3 0, #FFF0F5 15%, #E6E6FA 30%, #a166ab1a 44%, #5073b81a 58%, #E6E6FA 72%, #FFF0F5 86%, #9400D3 100%)"
     # 说明：https://developer.mozilla.org/zh-CN/docs/Web/CSS/background
 
     # 顶栏布局
@@ -312,12 +313,12 @@ uglyURLs = false
     # 3. posts     文章摘要
     # 4. page      普通页面
 
-    homeLayout = "poetry"
+    homeLayout = "posts"
 
     ## 「诗意人生」
     # 诗句，支持 Markdown
     ###指引文件
-    homePoetry = ["霅溪湾里钓渔翁，舴艋为家西复东。","江上雪，浦边风，笑著荷衣不叹穷。","松江蟹舍主人欢，菰饭莼羹亦共餐。","枫叶落，荻花乾，醉宿渔舟不觉寒。","青草湖中月正圆，巴陵渔父棹歌连。","钓车子，掘头船，乐在风波不用仙。"]
+    # homePoetry = ["霅溪湾里钓渔翁，舴艋为家西复东。","江上雪，浦边风，笑著荷衣不叹穷。","松江蟹舍主人欢，菰饭莼羹亦共餐。","枫叶落，荻花乾，醉宿渔舟不觉寒。","青草湖中月正圆，巴陵渔父棹歌连。","钓车子，掘头船，乐在风波不用仙。"]
     # 底部链接的内间距，单位：em
     homeLinksPadding = 1
 
@@ -356,7 +357,7 @@ uglyURLs = false
     # 注意：请保持此格式，更改数字
 
     # 站点的推特帐号
-    siteTwitter = "lengyefenghan"
+    #siteTwitter = "lengyefenghan"
     # 说明：用于 Twitter Cards
 
 
@@ -605,24 +606,6 @@ uglyURLs = false
     enableDisqus = false
     disqusShortname = ""
 
-    ## Valine
-    enableValine = false
-    valineAppId = ""
-    valineAppKey = ""
-    valinePlaceholder = "Just go go"
-    valineNotify = false
-    valineVerify = false
-    valinePath = ""
-    valineAvatar = "mm"
-    valineMeta = ["nick", "mail", "link"]
-    valinePageSize = 10
-    valineLang = "zh-cn"
-    valineVisitor = false
-    valineHighlight = true
-    avatarForce = false
-    valineRecordIP = false
-    valineServerURLs = ""
-    # 说明：https://valine.js.org/
 
     ## Utterances
     enableUtterances = false
@@ -1210,7 +1193,6 @@ uglyURLs = false
     # 是否在首页显示
     displayFooterInHome = true
 
-    displayCopyleftSymbol = false
     # 是否显示版权符号（©）
     displayCopyrightSymbol = true
 
@@ -1225,7 +1207,7 @@ uglyURLs = false
     iconAnimation = true
 
     # 是否显示 Hugo 和 MemE 的链接
-    displayPoweredBy = true
+    displayPoweredBy = false
 
     # 是否显示站点的版权信息
     displaySiteCopyright = true
