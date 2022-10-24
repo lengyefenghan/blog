@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-cn">
     <title type="text">冷夜枫寒</title>
     <subtitle type="html">冷夜枫寒，一个分享软件、知识的地方。</subtitle>
-    <updated>2022-10-24T16:44:44&#43;08:00</updated>
+    <updated>2022-10-24T18:39:28&#43;08:00</updated>
     <id>https://lengyefenghan.top/</id>
     <link rel="alternate" type="text/html" href="https://lengyefenghan.top/" />
     <link rel="self" type="application/atom&#43;xml" href="https://lengyefenghan.top/atom.xml" />
@@ -16,37 +16,6 @@
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.104.3">Hugo</generator>
-        <entry>
-            <title type="text">利用github webhooks实现博客更新</title>
-            <link rel="alternate" type="text/html" href="https://lengyefenghan.top/blogs/2022-10-24/" />
-            <id>https://lengyefenghan.top/blogs/2022-10-24/</id>
-            <updated>2022-10-24T14:43:44&#43;08:00</updated>
-            <published>2022-10-24T11:03:39&#43;08:00</published>
-            <author>
-                    <name>冷夜枫寒</name>
-                    <uri>https://lengyefenghan.top/</uri>
-                    <email>lengyefenghan@outlook.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">什么是github webhooks github官方说明 Payload URL https://lengyefenghan.top/payload caddy http.git</summary>
-            
-                <content type="html">&lt;h1 id=&#34;什么是github-webhooks&#34;&gt;什么是github webhooks&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;https://docs.github.com/cn/developers/webhooks-and-events/webhooks/about-webhooks&#34;&gt;github官方说明&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Payload URL &lt;a href=&#34;https://lengyefenghan.top/payload&#34;&gt;https://lengyefenghan.top/payload&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;caddy http.git&lt;/p&gt;
-</content>
-            
-            
-            
-            
-            
-                
-                    
-                
-                    
-                
-            
-        </entry>
-    
         <entry>
             <title type="text">搭建ariang并开启和websockets安全并且为aria2开启ipv6访问</title>
             <link rel="alternate" type="text/html" href="https://lengyefenghan.top/blogs/2022-07-04-1/" />

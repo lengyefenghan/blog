@@ -23,38 +23,10 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Mon, 24 Oct 2022 16:44:44 &#43;0800</lastBuildDate>
+        <lastBuildDate>Mon, 24 Oct 2022 18:39:28 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://lengyefenghan.top/rss.xml" />
         
-        
-            <item>
-                <title>利用github webhooks实现博客更新</title>
-                <link>https://lengyefenghan.top/blogs/2022-10-24/</link>
-                <guid isPermaLink="true">https://lengyefenghan.top/blogs/2022-10-24/</guid>
-                <pubDate>Mon, 24 Oct 2022 11:03:39 &#43;0800</pubDate>
-                
-                    <author>lengyefenghan@outlook.com (冷夜枫寒)</author>
-                
-                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
-                
-                    <description>&lt;h1 id=&#34;什么是github-webhooks&#34;&gt;什么是github webhooks&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;https://docs.github.com/cn/developers/webhooks-and-events/webhooks/about-webhooks&#34;&gt;github官方说明&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Payload URL &lt;a href=&#34;https://lengyefenghan.top/payload&#34;&gt;https://lengyefenghan.top/payload&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;caddy http.git&lt;/p&gt;
-</description>
-                
-                
-                
-                
-                
-                    
-                        
-                    
-                        
-                    
-                
-            </item>
         
             <item>
                 <title>搭建ariang并开启和websockets安全并且为aria2开启ipv6访问</title>
