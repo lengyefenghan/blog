@@ -537,21 +537,21 @@ uglyURLs = false
     # 说明：仅在生产环境（production）下渲染
 
     # 是否开启（全局设置）
-    enableComments = false
+    enableComments = true
     # 说明：文章的 Front Matter 中的 `comments`
     #      的优先级高于此处
 
     # 直接加载评论，不需要手动点击按钮加载
-    autoLoadComments = false
+    autoLoadComments = true
 
     ## Disqus
     enableDisqus = false
     disqusShortname = ""
 
     ## Valine
-    enableValine = true
-    valineAppId = "tJqi9bLiK2zTJoyNd7YqE81g-gzGzoHsz"
-    valineAppKey = "iUsdP93uyE4M2onI86WBl4rw"
+    enableValine = false
+    valineAppId = ""
+    valineAppKey = ""
     valinePlaceholder = "Just go go"
     valinePath = ""
     valineAvatar = "mm"
@@ -579,7 +579,7 @@ uglyURLs = false
     # 说明：https://utteranc.es/
 
     ## Gitalk
-    enableGitalk = false
+    enableGitalk = true
     gitalkClientID = "your_client_id"
     gitalkClientSecret = "your_client_secret"
     gitalkRepo = "your_repository"
@@ -601,7 +601,7 @@ uglyURLs = false
 
     # 说明：仅在生产环境（production）下渲染
 
-    enableGoogleAnalytics = true
+    enableGoogleAnalytics = false
 
     # 跟踪代码的类型
     trackingCodeType = "gtag"
@@ -624,10 +624,10 @@ uglyURLs = false
     googleAdClient = "ca-pub-4304291357650629"
 
     ## 自动广告
-    enableGoogleAutoAds = true
+    enableGoogleAutoAds = false
 
     ## 广告单元
-    enableGoogleAdUnits = true
+    enableGoogleAdUnits = false
     googleAdSlot = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
 
 
