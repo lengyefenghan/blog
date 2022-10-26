@@ -16,9 +16,6 @@ draft: false
 {{<friend name="白袍的小行星" url="https://www.red-team.tips/" logo="https://www.red-team.tips/images/avatar.png?v=1654830448214" word="集中一点 登峰造极" >}}
 <!-- https://www.red-team.tips/  白袍的小行星 -->
 &nbsp;
-{{<friend name="EarthCivils" url="https://www.earthcivils.top/" logo="https://www.earthcivils.top/favicon.ico" word="Welcome to EarthCivils" >}}
-<!-- https://www.earthcivils.top/  ec -->
-&nbsp;
 
 {{<friend name="慕木er" url="https://iori-yimaga.top/" logo="https://cdn.jsdelivr.net/gh/Iori-yimaga/PicBed/MyBlog/avatar.jpg" word="当程序运行的那一刻，我知道是编译器对我的温柔" >}}
 <!-- https://www.earthcivils.top/  ec -->
@@ -28,7 +25,9 @@ draft: false
 <!-- https://www.earthcivils.top/  ec -->
 &nbsp;
 
-
+{{<friend name="Purofle" url="https://blog.archlinux.tech/" logo="https://q1.qlogo.cn/g?b=qq&nk=3272912942&s=640" word="大漠孤烟直，长河落日圆。" >}}
+<!-- https://www.earthcivils.top/  ec -->
+&nbsp;
 
 <!-- {{<friend name="九练技术栈" url="http://deeplearn.wiki/" logo="http://deeplearn.wiki/images/avatar.png" word="为了实现自己的价值" >}}
 {{<friend name="九练技术栈" url="http://deeplearn.wiki/" logo="http://deeplearn.wiki/images/avatar.png" word="为了实现自己的价值" >}}
