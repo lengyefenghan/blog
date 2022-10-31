@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sat, 29 Oct 2022 20:41:52 &#43;0800</lastBuildDate>
+        <lastBuildDate>Mon, 31 Oct 2022 10:34:45 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://lengyefenghan.top/rss.xml" />
         
@@ -470,22 +470,6 @@ server {
 &lt;li&gt;应用中启用ocdownloader&lt;/li&gt;
 &lt;li&gt;在设置 管理 其他设置ocdownloader 填入aria2的配置&lt;/li&gt;
 &lt;/ol&gt;
-&lt;!-- 引入评论功能 --&gt;
-&lt;div id=&#34;SOHUCS&#34; style=&#34;width: 80%;display:block;height:auto;&#34;&gt;&lt;/div&gt; 
-&lt;script type=&#34;text/javascript&#34;&gt; 
-(function(){ 
-var appid = &#39;cyw8JY6N5&#39;; 
-var conf = &#39;prod_e3b09f470b09f642bb0bd4b1d9479c42&#39;; 
-var width = window.innerWidth || document.documentElement.clientWidth; 
-if (width &lt; 1000) {
-var head = document.getElementsByTagName(&#39;head&#39;)[0]||document.head||document.documentElement;
-var script = document.createElement(&#39;script&#39;);
-script.type = &#39;text/javascript&#39;;
-script.charset = &#39;utf-8&#39;;
-script.id = &#39;changyan_mobile_js&#39;;
-script.src = &#39;https://cy-cdn.kuaizhan.com/upload/mobile/wap-js/changyan_mobile.js?client_id=&#39; + appid + &#39;&amp;conf=&#39; + conf;
-head.appendChild(script);
-} else { var loadJs=function(d,a){var c=document.getElementsByTagName(&#34;head&#34;)[0]||document.head||document.documentElement;var b=document.createElement(&#34;script&#34;);b.setAttribute(&#34;type&#34;,&#34;text/javascript&#34;);b.setAttribute(&#34;charset&#34;,&#34;UTF-8&#34;);b.setAttribute(&#34;src&#34;,d);if(typeof a===&#34;function&#34;){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e===&#34;loaded&#34;||e===&#34;complete&#34;){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs(&#34;https://cy-cdn.kuaizhan.com/upload/changyan.js&#34;,function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); &lt;/script&gt;
 </description>
                 
                 
