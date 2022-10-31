@@ -25,13 +25,13 @@ pluralizeListTitles = false
 summaryLength = 42
 
 # 是否开启 GitHub 风格的 Emoji 书写方式
-enableEmoji = false
+enableEmoji = true
 
 # 脚注的返回链接中的文本
 footnoteReturnLinkContents = "↩"
 
 # 是否启用 Git 版本信息
-enableGitInfo = false
+enableGitInfo = true
 
 # 是否生成 robots.txt 文件
 enableRobotsTXT = true
@@ -426,16 +426,16 @@ uglyURLs = false
     # 深色模式
 
     # 是否开启
-    enableDarkMode = true
+    enableDarkMode = false
 
     # 默认模式
     defaultTheme = "light"
     # 说明：light（浅色模式）或 dark（深色模式）
 
     # 是否隐藏模式切换开关
-    hideThemeToggle = false
+    hideThemeToggle = true
     # 是否在首页隐藏模式切换开关
-    hideThemeToggleInHome = false
+    hideThemeToggleInHome = true
     # 说明：如果开启了深色模式，即使你隐藏了开关，
     #      你的读者依然可能以深色模式阅读你的博
     #      客，如果该读者的系统设置为深色模式的
@@ -883,6 +883,7 @@ uglyURLs = false
 
     # 网络字体链接
     fontsLink = "https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Noto+Serif+SC:wght@400;500;700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    #fontsLink = "https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Noto+Serif+SC:wght@400;500;700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap"
     # 说明：要想读者一定体验到你设置的字体，最好
     #      采用网络字体。MemE 主题目前仅支持
     #      Google Fonts 的链接，请前往
