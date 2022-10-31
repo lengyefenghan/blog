@@ -1,4 +1,93 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-cn"><title type="text">冷夜枫寒</title><subtitle type="html">冷夜枫寒，一个分享软件、知识的地方。</subtitle><updated>2022-10-26T13:10:37+08:00</updated><id>https://lengyefenghan.top/</id><link rel="alternate" type="text/html" href="https://lengyefenghan.top/"/><link rel="self" type="application/atom+xml" href="https://lengyefenghan.top/atom.xml"/><author><name>冷夜枫寒</name><uri>https://lengyefenghan.top/</uri><email>lengyefenghan@outlook.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><generator uri="https://gohugo.io/" version="0.104.3">Hugo</generator><entry><title type="text">搭建ariang并开启和websockets安全并且为aria2开启ipv6访问</title><link rel="alternate" type="text/html" href="https://lengyefenghan.top/blogs/2022-07-04-1/"/><id>https://lengyefenghan.top/blogs/2022-07-04-1/</id><updated>2022-10-26T11:21:52+08:00</updated><published>2022-07-04T11:50:04+08:00</published><author><name>冷夜枫寒</name><uri>https://lengyefenghan.top/</uri><email>lengyefenghan@outlook.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">安装aria2 1. 需要安装好aria2不在描述，可以看我其他文章 2. 修改配置文件开启we……</summary><content type="html">&lt;h2 id="安装aria2">安装aria2&lt;/h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-cn"><title type="text">冷夜枫寒</title><subtitle type="html">冷夜枫寒，一个分享软件、知识的地方。</subtitle><updated>2022-10-31T11:42:11+08:00</updated><id>https://lengyefenghan.top/</id><link rel="alternate" type="text/html" href="https://lengyefenghan.top/"/><link rel="self" type="application/atom+xml" href="https://lengyefenghan.top/atom.xml"/><author><name>冷夜枫寒</name><uri>https://lengyefenghan.top/</uri><email>lengyefenghan@outlook.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><generator uri="https://gohugo.io/" version="0.104.3">Hugo</generator><entry><title type="text">博客评论功能测试</title><link rel="alternate" type="text/html" href="https://lengyefenghan.top/blogs/2022-10-24/"/><id>https://lengyefenghan.top/blogs/2022-10-24/</id><updated>2022-10-31T11:42:02+08:00</updated><published>2022-10-24T11:03:39+08:00</published><author><name>冷夜枫寒</name><uri>https://lengyefenghan.top/</uri><email>lengyefenghan@outlook.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">测试giscus评论功能 2022-10-31 测试可用 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 &amp;lt;script src=&amp;#34;https://giscus.app/client.js&amp;#34; data-repo=&amp;#34;lengyefenghan/blog&amp;#34; data-repo-id=&amp;#34;R_kgDOHJIjrA&amp;#34; data-category=&amp;#34;Comments&amp;#34; data-category-id=&amp;#34;DIC_kwDOHJIjrM4CSMzr&amp;#34; data-mapping=&amp;#34;pathname&amp;#34; data-strict=&amp;#34;0&amp;#34; data-reactions-enabled=&amp;#34;1&amp;#34; data-emit-metadata=&amp;#34;1&amp;#34;……</summary><content type="html">&lt;h1 id="测试giscus评论功能">测试giscus评论功能&lt;/h1>
+&lt;ol>
+&lt;li>2022-10-31 测试可用&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">script&lt;/span> &lt;span class="nx">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;https://giscus.app/client.js&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">data&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="nx">repo&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;lengyefenghan/blog&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">data&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="nx">repo&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="nx">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;R_kgDOHJIjrA&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">data&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="nx">category&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;Comments&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">data&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="nx">category&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="nx">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;DIC_kwDOHJIjrM4CSMzr&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">data&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="nx">mapping&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;pathname&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">data&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="nx">strict&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;0&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">data&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="nx">reactions&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="nx">enabled&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;1&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">data&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="nx">emit&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="nx">metadata&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;1&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">data&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="nx">input&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="nx">position&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;top&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">data&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="nx">theme&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;light&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">data&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="nx">lang&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;zh-CN&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">crossorigin&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;anonymous&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">async&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">/script&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="2">
+&lt;li>测试嵌入模板&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"> file:hemes/meme/layouts/partials/components/comments.html
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ if .Site.Params.enableGiscus }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;giscus&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://giscus.app/client.js&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">data-repo&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;lengyefenghan/blog&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">data-repo-id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;R_kgDOHJIjrA&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">data-category&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;Comments&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">data-category-id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;DIC_kwDOHJIjrM4CSMzr&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">data-mapping&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;pathname&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">data-strict&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;0&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">data-reactions-enabled&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;1&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">data-emit-metadata&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;1&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">data-input-position&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;top&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">data-theme&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;light&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">data-lang&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;zh-CN&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">crossorigin&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;anonymous&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">async&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ end }}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></content></entry><entry><title type="text">搭建ariang并开启和websockets安全并且为aria2开启ipv6访问</title><link rel="alternate" type="text/html" href="https://lengyefenghan.top/blogs/2022-07-04-1/"/><id>https://lengyefenghan.top/blogs/2022-07-04-1/</id><updated>2022-10-26T11:21:52+08:00</updated><published>2022-07-04T11:50:04+08:00</published><author><name>冷夜枫寒</name><uri>https://lengyefenghan.top/</uri><email>lengyefenghan@outlook.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">安装aria2 1. 需要安装好aria2不在描述，可以看我其他文章 2. 修改配置文件开启we……</summary><content type="html">&lt;h2 id="安装aria2">安装aria2&lt;/h2>
 &lt;h2 id="1-需要安装好aria2不在描述可以看我其他文章">1. 需要安装好aria2不在描述，可以看我其他文章&lt;/h2>
 &lt;h2 id="2-修改配置文件开启websockets安全-可选非必需项目">2. 修改配置文件开启websockets(安全) 可选非必需项目&lt;/h2>
 &lt;pre tabindex="0">&lt;code class="language-conf" data-lang="conf">#是否启用RPC服务的SSL/TLS加密
@@ -60,7 +149,7 @@ location / {
 index index.html;
 }
 }
-&lt;/code>&lt;/pre>&lt;p>c. 重启测试&lt;/p></content><category scheme="https://lengyefenghan.top/tags/linux/" term="linux" label="linux"/><category scheme="https://lengyefenghan.top/tags/nginx/" term="nginx" label="nginx"/><category scheme="https://lengyefenghan.top/tags/ipv6/" term="ipv6" label="ipv6"/><category scheme="https://lengyefenghan.top/tags/aria2nga/" term="aria2nga" label="aria2nga"/><category scheme="https://lengyefenghan.top/tags/ria2/" term="ria2" label="ria2"/></entry><entry><title type="text">Nextcloud添加aria2下载功能</title><link rel="alternate" type="text/html" href="https://lengyefenghan.top/blogs/2022-05-31/"/><id>https://lengyefenghan.top/blogs/2022-05-31/</id><updated>2022-10-24T08:55:58+08:00</updated><published>2022-05-31T09:01:06+08:00</published><author><name>冷夜枫寒</name><uri>https://lengyefenghan.top/</uri><email>lengyefenghan@outlook.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">安装aria2 1 yay -S aria2-systemd aria2 修改配置文件 下载配置文件模板 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16……</summary><content type="html">&lt;h2 id="安装aria2">安装aria2&lt;/h2>
+&lt;/code>&lt;/pre>&lt;p>c. 重启测试&lt;/p></content><category scheme="https://lengyefenghan.top/tags/linux/" term="linux" label="linux"/><category scheme="https://lengyefenghan.top/tags/nginx/" term="nginx" label="nginx"/><category scheme="https://lengyefenghan.top/tags/ipv6/" term="ipv6" label="ipv6"/><category scheme="https://lengyefenghan.top/tags/aria2nga/" term="aria2nga" label="aria2nga"/><category scheme="https://lengyefenghan.top/tags/ria2/" term="ria2" label="ria2"/></entry><entry><title type="text">Nextcloud添加aria2下载功能</title><link rel="alternate" type="text/html" href="https://lengyefenghan.top/blogs/2022-05-31/"/><id>https://lengyefenghan.top/blogs/2022-05-31/</id><updated>2022-10-31T10:34:02+08:00</updated><published>2022-05-31T09:01:06+08:00</published><author><name>冷夜枫寒</name><uri>https://lengyefenghan.top/</uri><email>lengyefenghan@outlook.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">安装aria2 1 yay -S aria2-systemd aria2 修改配置文件 下载配置文件模板 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16……</summary><content type="html">&lt;h2 id="安装aria2">安装aria2&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -209,23 +298,7 @@ index index.html;
 &lt;li>添加扩展 下载最新版 &lt;a href="https://github.com/e-alfred/ocdownloader/releases">https://github.com/e-alfred/ocdownloader/releases&lt;/a> 然后解压到 /var/lib/nextcloud/apps 并且设置用户和组都为nextcloud&lt;/li>
 &lt;li>应用中启用ocdownloader&lt;/li>
 &lt;li>在设置 管理 其他设置ocdownloader 填入aria2的配置&lt;/li>
-&lt;/ol>
-&lt;!-- 引入评论功能 -->
-&lt;div id="SOHUCS" style="width: 80%;display:block;height:auto;">&lt;/div>
-&lt;script type="text/javascript">
-(function(){
-var appid = 'cyw8JY6N5';
-var conf = 'prod_e3b09f470b09f642bb0bd4b1d9479c42';
-var width = window.innerWidth || document.documentElement.clientWidth;
-if (width &lt; 1000) {
-var head = document.getElementsByTagName('head')[0]||document.head||document.documentElement;
-var script = document.createElement('script');
-script.type = 'text/javascript';
-script.charset = 'utf-8';
-script.id = 'changyan_mobile_js';
-script.src = 'https://cy-cdn.kuaizhan.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&amp;conf=' + conf;
-head.appendChild(script);
-} else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://cy-cdn.kuaizhan.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); &lt;/script></content><category scheme="https://lengyefenghan.top/categories/nextcloud/" term="Nextcloud" label="Nextcloud"/><category scheme="https://lengyefenghan.top/tags/linux/" term="linux" label="linux"/><category scheme="https://lengyefenghan.top/tags/nextcloud/" term="nextcloud" label="nextcloud"/><category scheme="https://lengyefenghan.top/tags/aria2/" term="aria2" label="aria2"/></entry><entry><title type="text">Nextcloud踩坑记</title><link rel="alternate" type="text/html" href="https://lengyefenghan.top/blogs/2022-05-29/"/><id>https://lengyefenghan.top/blogs/2022-05-29/</id><updated>2022-10-24T08:55:58+08:00</updated><published>2022-05-29T07:47:39+08:00</published><author><name>冷夜枫寒</name><uri>https://lengyefenghan.top/</uri><email>lengyefenghan@outlook.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Windows下无法同步文件夹 文件夹大小写区分问题 在windows下默认文件夹不区分……</summary><content type="html">&lt;h2 id="windows下无法同步文件夹">Windows下无法同步文件夹&lt;/h2>
+&lt;/ol></content><category scheme="https://lengyefenghan.top/categories/nextcloud/" term="Nextcloud" label="Nextcloud"/><category scheme="https://lengyefenghan.top/tags/linux/" term="linux" label="linux"/><category scheme="https://lengyefenghan.top/tags/nextcloud/" term="nextcloud" label="nextcloud"/><category scheme="https://lengyefenghan.top/tags/aria2/" term="aria2" label="aria2"/></entry><entry><title type="text">Nextcloud踩坑记</title><link rel="alternate" type="text/html" href="https://lengyefenghan.top/blogs/2022-05-29/"/><id>https://lengyefenghan.top/blogs/2022-05-29/</id><updated>2022-10-29T20:41:37+08:00</updated><published>2022-05-29T07:47:39+08:00</published><author><name>冷夜枫寒</name><uri>https://lengyefenghan.top/</uri><email>lengyefenghan@outlook.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Windows下无法同步文件夹 文件夹大小写区分问题 在windows下默认文件夹不区分……</summary><content type="html">&lt;h2 id="windows下无法同步文件夹">Windows下无法同步文件夹&lt;/h2>
 &lt;ol>
 &lt;li>文件夹大小写区分问题
 在windows下默认文件夹不区分大小写，也就是&amp;quot;test&amp;quot;和&amp;quot;TEST&amp;quot;是同一个文件夹，如果想要同步文件夹，需要设置文件夹大小写区分&lt;/li>
@@ -265,7 +338,21 @@ head.appendChild(script);
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Jun &lt;span class="m">24&lt;/span> 08:58:25 cloud.lengyefenghan.top nginx&lt;span class="o">[&lt;/span>2911&lt;span class="o">]&lt;/span>: 2022/06/24 08:58:25 &lt;span class="o">[&lt;/span>error&lt;span class="o">]&lt;/span> 2911#2911: *3 FastCGI sent in stderr: &lt;span class="s2">&amp;#34;PHP message: {&amp;#34;&lt;/span>reqId&lt;span class="s2">&amp;#34;:&amp;#34;&lt;/span>IBdcJOfunqHjhcnOBr9S&lt;span class="s2">&amp;#34;,&amp;#34;&lt;/span>level&lt;span class="s2">&amp;#34;:3,&amp;#34;&lt;/span>time&lt;span class="s2">&amp;#34;:&amp;#34;&lt;/span>2022-06-24T00:58:25+00:00&lt;span class="s2">&amp;#34;,&amp;#34;&lt;/span>remoteAddr&lt;span class="s2">&amp;#34;:&amp;#34;&lt;/span>127.0.0.1&lt;span class="s2">&amp;#34;,&amp;#34;&lt;/span>user&lt;span class="s2">&amp;#34;:&amp;#34;&lt;/span>--&lt;span class="s2">&amp;#34;,&amp;#34;&lt;/span>app&lt;span class="s2">&amp;#34;:&amp;#34;&lt;/span>PHP&lt;span class="s2">&amp;#34;,&amp;#34;&lt;/span>method&lt;span class="s2">&amp;#34;:&amp;#34;&lt;/span>GET&lt;span class="s2">&amp;#34;,&amp;#34;&lt;/span>url&lt;span class="s2">&amp;#34;:&amp;#34;&lt;/span>/&lt;span class="s2">&amp;#34;,&amp;#34;&lt;/span>message&lt;span class="s2">&amp;#34;:&amp;#34;&lt;/span>fopen&lt;span class="o">(&lt;/span>/usr/share/webapps/nextcloud/data/nextcloud.log&lt;span class="o">)&lt;/span>: Failed to open stream: No such file or directory at /usr/share/webapps/nextcloud/lib/private/Log/File.php#84&lt;span class="s2">&amp;#34;,&amp;#34;&lt;/span>userAgent&lt;span class="s2">&amp;#34;:&amp;#34;&lt;/span>Mozilla/5.0 &lt;span class="o">(&lt;/span>W&lt;span class="s2">&amp;#34; while reading upstream, client: 127.0.0.1, server: cloud.lengyefenghan.top, request: &amp;#34;&lt;/span>GET / HTTP/2.0&lt;span class="s2">&amp;#34;, upstream: &amp;#34;&lt;/span>fastcgi://unix:/run/nextcloud/nextcloud.sock:&lt;span class="s2">&amp;#34;, host: &amp;#34;&lt;/span>cloud.lengyefenghan.top&lt;span class="s2">&amp;#34;
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>根据错误可知是权限问题，通过chmod 775 -R config可以修正，但是此处修正后仍然提示错误，经过检查是php-fpm配置文件丢失，在上一篇文章 &lt;a href="https://lengyefenghan.top/blogs/2022-04-08-1/">在Archlinux下安装nextcloud&lt;/a> 中修改的php-fpm进行的操作丢失，重新操作后恢复正常&lt;/p></content><category scheme="https://lengyefenghan.top/categories/nextcloud/" term="Nextcloud" label="Nextcloud"/><category scheme="https://lengyefenghan.top/tags/windows/" term="Windows" label="Windows"/><category scheme="https://lengyefenghan.top/tags/nextcloud/" term="nextcloud" label="nextcloud"/></entry><entry><title type="text">ArchLinux搭建gitea服务器</title><link rel="alternate" type="text/html" href="https://lengyefenghan.top/blogs/2022-05-20-2/"/><id>https://lengyefenghan.top/blogs/2022-05-20-2/</id><updated>2022-10-24T08:55:58+08:00</updated><published>2022-05-20T12:06:58+08:00</published><author><name>冷夜枫寒</name><uri>https://lengyefenghan.top/</uri><email>lengyefenghan@outlook.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">安装gitea 1 sudo pacman -S gitea 使用 MariaDB/MySQL数据库 安装数据库 1 sudo pacman -S mariadb 初始……</summary><content type="html">&lt;h2 id="安装gitea">安装gitea&lt;/h2>
+&lt;/div>&lt;p>根据错误可知是权限问题，通过chmod 775 -R config可以修正，但是此处修正后仍然提示错误，经过检查是php-fpm配置文件丢失，在上一篇文章 &lt;a href="https://lengyefenghan.top/blogs/2022-04-08-1/">在Archlinux下安装nextcloud&lt;/a> 中修改的php-fpm进行的操作丢失，重新操作后恢复正常&lt;/p>
+&lt;h2 id="nginx-您的网页服务器未正确设置以解析carddav-caldav">nginx 您的网页服务器未正确设置以解析carddav caldav&lt;/h2>
+&lt;pre tabindex="0">&lt;code class="language-conf" data-lang="conf">location ^~ /.well-known {
+# The rules in this block are an adaptation of the rules
+# in `.htaccess` that concern `/.well-known`.
+location = /.well-known/carddav { return 301 $scheme://$host/remote.php/dav/; }
+location = /.well-known/caldav { return 301 $scheme://$host/remote.php/dav/; }
+location /.well-known/acme-challenge { try_files $uri $uri/ =404; }
+location /.well-known/pki-validation { try_files $uri $uri/ =404; }
+# Let Nextcloud&amp;#39;s API for `/.well-known` URIs handle all other
+# requests by passing them to the front-end controller.
+return 301 /index.php$request_uri;
+}
+&lt;/code>&lt;/pre>&lt;h2 id="此实例中的-php-imagick-模块不支持-svg为了获得更好的兼容性建议安装它">此实例中的 php-imagick 模块不支持 SVG。为了获得更好的兼容性，建议安装它&lt;/h2>
+&lt;p>安装libmagickcore-6.q16hdri-6-extra&lt;/p></content><category scheme="https://lengyefenghan.top/categories/nextcloud/" term="Nextcloud" label="Nextcloud"/><category scheme="https://lengyefenghan.top/tags/windows/" term="Windows" label="Windows"/><category scheme="https://lengyefenghan.top/tags/nextcloud/" term="nextcloud" label="nextcloud"/></entry><entry><title type="text">ArchLinux搭建gitea服务器</title><link rel="alternate" type="text/html" href="https://lengyefenghan.top/blogs/2022-05-20-2/"/><id>https://lengyefenghan.top/blogs/2022-05-20-2/</id><updated>2022-10-24T08:55:58+08:00</updated><published>2022-05-20T12:06:58+08:00</published><author><name>冷夜枫寒</name><uri>https://lengyefenghan.top/</uri><email>lengyefenghan@outlook.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">安装gitea 1 sudo pacman -S gitea 使用 MariaDB/MySQL数据库 安装数据库 1 sudo pacman -S mariadb 初始……</summary><content type="html">&lt;h2 id="安装gitea">安装gitea&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
