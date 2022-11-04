@@ -21,11 +21,14 @@ draft: false
 <!-- https://www.earthcivils.top/  ec -->
 &nbsp;
 
-{{<friend name="shiro" url="http://shiro.run/" logo="http://shiro.run/favicon.ico" word=" " >}}
+
+{{<friend name="shiro" url="https://shirodoma.in/" logo="https://shirodoma.in/static/img/about.jpg" word="一个个人简介罢了.(xx岁,是学生?)" >}}
 <!-- https://www.earthcivils.top/  ec -->
 &nbsp;
 
 {{<friend name="Purofle" url="https://blog.archlinux.tech/" logo="https://q1.qlogo.cn/g?b=qq&nk=3272912942&s=640" word="大漠孤烟直，长河落日圆。" >}}
+
+
 <!-- https://www.earthcivils.top/  ec -->
 &nbsp;
 
