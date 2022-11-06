@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-cn"><title type="text">冷夜枫寒</title><subtitle type="html">冷夜枫寒，一个分享软件、知识的地方。</subtitle><updated>2022-11-06T10:33:36+08:00</updated><id>https://lengyefenghan.top/</id><link rel="alternate" type="text/html" href="https://lengyefenghan.top/"/><link rel="self" type="application/atom+xml" href="https://lengyefenghan.top/atom.xml"/><author><name>冷夜枫寒</name><uri>https://lengyefenghan.top/</uri><email>lengyefenghan@outlook.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><generator uri="https://gohugo.io/" version="0.105.0">Hugo</generator><entry><title type="text">博客评论功能测试</title><link rel="alternate" type="text/html" href="https://lengyefenghan.top/blogs/2022-10-24/"/><id>https://lengyefenghan.top/blogs/2022-10-24/</id><updated>2022-10-31T11:42:27+08:00</updated><published>2022-10-24T11:03:39+08:00</published><author><name>冷夜枫寒</name><uri>https://lengyefenghan.top/</uri><email>lengyefenghan@outlook.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">测试giscus评论功能 2022-10-31 测试可用 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 &amp;lt;script src=&amp;#34;https://giscus.app/client.js&amp;#34; data-repo=&amp;#34;lengyefenghan/blog&amp;#34; data-repo-id=&amp;#34;R_kgDOHJIjrA&amp;#34; data-category=&amp;#34;Comments&amp;#34; data-category-id=&amp;#34;DIC_kwDOHJIjrM4CSMzr&amp;#34; data-mapping=&amp;#34;pathname&amp;#34; data-strict=&amp;#34;0&amp;#34; data-reactions-enabled=&amp;#34;1&amp;#34; data-emit-metadata=&amp;#34;1&amp;#34;……</summary><content type="html">&lt;h1 id="测试giscus评论功能">测试giscus评论功能&lt;/h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-cn"><title type="text">冷夜枫寒</title><subtitle type="html">冷夜枫寒，一个分享软件、知识的地方。</subtitle><updated>2022-11-06T10:38:27+08:00</updated><id>https://lengyefenghan.top/</id><link rel="alternate" type="text/html" href="https://lengyefenghan.top/"/><link rel="self" type="application/atom+xml" href="https://lengyefenghan.top/atom.xml"/><author><name>冷夜枫寒</name><uri>https://lengyefenghan.top/</uri><email>lengyefenghan@outlook.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><generator uri="https://gohugo.io/" version="0.105.0">Hugo</generator><entry><title type="text">博客评论功能测试</title><link rel="alternate" type="text/html" href="https://lengyefenghan.top/blogs/2022-10-24/"/><id>https://lengyefenghan.top/blogs/2022-10-24/</id><updated>2022-10-31T11:42:27+08:00</updated><published>2022-10-24T11:03:39+08:00</published><author><name>冷夜枫寒</name><uri>https://lengyefenghan.top/</uri><email>lengyefenghan@outlook.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">测试giscus评论功能 2022-10-31 测试可用 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 &amp;lt;script src=&amp;#34;https://giscus.app/client.js&amp;#34; data-repo=&amp;#34;lengyefenghan/blog&amp;#34; data-repo-id=&amp;#34;R_kgDOHJIjrA&amp;#34; data-category=&amp;#34;Comments&amp;#34; data-category-id=&amp;#34;DIC_kwDOHJIjrM4CSMzr&amp;#34; data-mapping=&amp;#34;pathname&amp;#34; data-strict=&amp;#34;0&amp;#34; data-reactions-enabled=&amp;#34;1&amp;#34; data-emit-metadata=&amp;#34;1&amp;#34;……</summary><content type="html">&lt;h1 id="测试giscus评论功能">测试giscus评论功能&lt;/h1>
 &lt;ol>
 &lt;li>2022-10-31 测试可用&lt;/li>
 &lt;/ol>
@@ -149,7 +149,7 @@ location / {
 index index.html;
 }
 }
-&lt;/code>&lt;/pre>&lt;p>c. 重启测试&lt;/p></content><category scheme="https://lengyefenghan.top/tags/linux/" term="linux" label="linux"/><category scheme="https://lengyefenghan.top/tags/nginx/" term="nginx" label="nginx"/><category scheme="https://lengyefenghan.top/tags/ipv6/" term="ipv6" label="ipv6"/><category scheme="https://lengyefenghan.top/tags/aria2nga/" term="aria2nga" label="aria2nga"/><category scheme="https://lengyefenghan.top/tags/ria2/" term="ria2" label="ria2"/></entry><entry><title type="text">Nextcloud添加aria2下载功能</title><link rel="alternate" type="text/html" href="https://lengyefenghan.top/blogs/2022-05-31/"/><id>https://lengyefenghan.top/blogs/2022-05-31/</id><updated>2022-10-31T10:34:33+08:00</updated><published>2022-05-31T09:01:06+08:00</published><author><name>冷夜枫寒</name><uri>https://lengyefenghan.top/</uri><email>lengyefenghan@outlook.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">安装aria2 1 yay -S aria2-systemd aria2 修改配置文件 下载配置文件模板 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16……</summary><content type="html">&lt;h2 id="安装aria2">安装aria2&lt;/h2>
+&lt;/code>&lt;/pre>&lt;p>c. 重启测试&lt;/p></content><category scheme="https://lengyefenghan.top/tags/linux/" term="linux" label="linux"/><category scheme="https://lengyefenghan.top/tags/nginx/" term="nginx" label="nginx"/><category scheme="https://lengyefenghan.top/tags/ipv6/" term="ipv6" label="ipv6"/><category scheme="https://lengyefenghan.top/tags/aria2nga/" term="aria2nga" label="aria2nga"/><category scheme="https://lengyefenghan.top/tags/ria2/" term="ria2" label="ria2"/></entry><entry><title type="text">Nextcloud添加aria2下载功能</title><link rel="alternate" type="text/html" href="https://lengyefenghan.top/blogs/2022-05-31/"/><id>https://lengyefenghan.top/blogs/2022-05-31/</id><updated>2022-11-06T10:33:58+08:00</updated><published>2022-05-31T09:01:06+08:00</published><author><name>冷夜枫寒</name><uri>https://lengyefenghan.top/</uri><email>lengyefenghan@outlook.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">安装aria2 1 yay -S aria2-systemd aria2 修改配置文件 下载配置文件模板 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16……</summary><content type="html">&lt;h2 id="安装aria2">安装aria2&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -298,33 +298,7 @@ index index.html;
 &lt;li>添加扩展 下载最新版 &lt;a href="https://github.com/e-alfred/ocdownloader/releases">https://github.com/e-alfred/ocdownloader/releases&lt;/a> 然后解压到 /var/lib/nextcloud/apps 并且设置用户和组都为nextcloud&lt;/li>
 &lt;li>应用中启用ocdownloader&lt;/li>
 &lt;li>在设置 管理 其他设置ocdownloader 填入aria2的配置&lt;/li>
-&lt;/ol>
-&lt;h1 id="调整nextcloud分片上传">调整nextcloud分片上传&lt;/h1>
-&lt;p>为了在上传带宽较高的环境中提升上传性能，可以调整服务器的上传块大小：
-sudo -u www-data php occ config:app:set files max_chunk_size --value 20971520
-输入一个以字节为单位的值（在本例中为 20MB）。设置为完全不分块。--value 0&lt;/p>
-&lt;p>默认值为 10485760 (10 MiB)。&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">#关闭分片大小&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo --user&lt;span class="o">=&lt;/span>www-data php /var/www/nextcloud/occ config:app:set files max_chunk_size --value &lt;span class="m">0&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#如果开启apcu&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo --user&lt;span class="o">=&lt;/span>www-data php --define apc.enable_cli&lt;span class="o">=&lt;/span>&lt;span class="m">1&lt;/span> /var/www/nextcloud/occ config:app:set files max_chunk_size --value &lt;span class="m">0&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h1 id="文件上传一段时间没有速度-之后失败">文件上传一段时间没有速度 之后失败&lt;/h1>
-&lt;p>调整缓存位置
-php/pool.d/www.conf&lt;/p>
-&lt;pre tabindex="0">&lt;code>env[TMP] = /tmp
-env[TMPDIR] = /tmp
-env[TEMP] = /tmp
-&lt;/code>&lt;/pre>&lt;p>修改合适路径&lt;/p></content><category scheme="https://lengyefenghan.top/categories/nextcloud/" term="Nextcloud" label="Nextcloud"/><category scheme="https://lengyefenghan.top/tags/linux/" term="linux" label="linux"/><category scheme="https://lengyefenghan.top/tags/nextcloud/" term="nextcloud" label="nextcloud"/><category scheme="https://lengyefenghan.top/tags/aria2/" term="aria2" label="aria2"/></entry><entry><title type="text">Nextcloud踩坑记</title><link rel="alternate" type="text/html" href="https://lengyefenghan.top/blogs/2022-05-29/"/><id>https://lengyefenghan.top/blogs/2022-05-29/</id><updated>2022-10-31T16:31:41+08:00</updated><published>2022-05-29T07:47:39+08:00</published><author><name>冷夜枫寒</name><uri>https://lengyefenghan.top/</uri><email>lengyefenghan@outlook.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Windows下无法同步文件夹 文件夹大小写区分问题 在windows下默认文件夹不区分……</summary><content type="html">&lt;h2 id="windows下无法同步文件夹">Windows下无法同步文件夹&lt;/h2>
+&lt;/ol></content><category scheme="https://lengyefenghan.top/categories/nextcloud/" term="Nextcloud" label="Nextcloud"/><category scheme="https://lengyefenghan.top/tags/linux/" term="linux" label="linux"/><category scheme="https://lengyefenghan.top/tags/nextcloud/" term="nextcloud" label="nextcloud"/><category scheme="https://lengyefenghan.top/tags/aria2/" term="aria2" label="aria2"/></entry><entry><title type="text">Nextcloud踩坑记</title><link rel="alternate" type="text/html" href="https://lengyefenghan.top/blogs/2022-05-29/"/><id>https://lengyefenghan.top/blogs/2022-05-29/</id><updated>2022-10-31T16:31:41+08:00</updated><published>2022-05-29T07:47:39+08:00</published><author><name>冷夜枫寒</name><uri>https://lengyefenghan.top/</uri><email>lengyefenghan@outlook.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Windows下无法同步文件夹 文件夹大小写区分问题 在windows下默认文件夹不区分……</summary><content type="html">&lt;h2 id="windows下无法同步文件夹">Windows下无法同步文件夹&lt;/h2>
 &lt;ol>
 &lt;li>文件夹大小写区分问题
 在windows下默认文件夹不区分大小写，也就是&amp;quot;test&amp;quot;和&amp;quot;TEST&amp;quot;是同一个文件夹，如果想要同步文件夹，需要设置文件夹大小写区分&lt;/li>
@@ -380,7 +354,33 @@ return 301 /index.php$request_uri;
 &lt;/code>&lt;/pre>&lt;h2 id="此实例中的-php-imagick-模块不支持-svg为了获得更好的兼容性建议安装它">此实例中的 php-imagick 模块不支持 SVG。为了获得更好的兼容性，建议安装它&lt;/h2>
 &lt;p>安装libmagickcore-6.q16hdri-6-extra&lt;/p>
 &lt;h2 id="fwrite-expects-parameter-1-to-be-resource-bool-given-in-file-varwwwnextcloudlibprivatesecuritycertificatemanagerphp">fwrite() expects parameter 1 to be resource, bool given in file '/var/www/nextcloud/lib/private/Security/CertificateManager.php&lt;/h2>
-&lt;p>修改nextcloud data目录权限不一致的目录 750&lt;/p></content><category scheme="https://lengyefenghan.top/categories/nextcloud/" term="Nextcloud" label="Nextcloud"/><category scheme="https://lengyefenghan.top/tags/windows/" term="Windows" label="Windows"/><category scheme="https://lengyefenghan.top/tags/nextcloud/" term="nextcloud" label="nextcloud"/></entry><entry><title type="text">ArchLinux搭建gitea服务器</title><link rel="alternate" type="text/html" href="https://lengyefenghan.top/blogs/2022-05-20-2/"/><id>https://lengyefenghan.top/blogs/2022-05-20-2/</id><updated>2022-10-24T08:56:14+08:00</updated><published>2022-05-20T12:06:58+08:00</published><author><name>冷夜枫寒</name><uri>https://lengyefenghan.top/</uri><email>lengyefenghan@outlook.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">安装gitea 1 sudo pacman -S gitea 使用 MariaDB/MySQL数据库 安装数据库 1 sudo pacman -S mariadb 初始……</summary><content type="html">&lt;h2 id="安装gitea">安装gitea&lt;/h2>
+&lt;p>修改nextcloud data目录权限不一致的目录 750&lt;/p>
+&lt;h1 id="调整nextcloud分片上传">调整nextcloud分片上传&lt;/h1>
+&lt;p>为了在上传带宽较高的环境中提升上传性能，可以调整服务器的上传块大小：
+sudo -u www-data php occ config:app:set files max_chunk_size --value 20971520
+输入一个以字节为单位的值（在本例中为 20MB）。设置为完全不分块。--value 0&lt;/p>
+&lt;p>默认值为 10485760 (10 MiB)。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">#关闭分片大小&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo --user&lt;span class="o">=&lt;/span>www-data php /var/www/nextcloud/occ config:app:set files max_chunk_size --value &lt;span class="m">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#如果开启apcu&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo --user&lt;span class="o">=&lt;/span>www-data php --define apc.enable_cli&lt;span class="o">=&lt;/span>&lt;span class="m">1&lt;/span> /var/www/nextcloud/occ config:app:set files max_chunk_size --value &lt;span class="m">0&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h1 id="文件上传一段时间没有速度-之后失败">文件上传一段时间没有速度 之后失败&lt;/h1>
+&lt;p>调整缓存位置
+php/pool.d/www.conf&lt;/p>
+&lt;pre tabindex="0">&lt;code>env[TMP] = /tmp
+env[TMPDIR] = /tmp
+env[TEMP] = /tmp
+&lt;/code>&lt;/pre>&lt;p>修改合适路径&lt;/p></content><category scheme="https://lengyefenghan.top/categories/nextcloud/" term="Nextcloud" label="Nextcloud"/><category scheme="https://lengyefenghan.top/tags/windows/" term="Windows" label="Windows"/><category scheme="https://lengyefenghan.top/tags/nextcloud/" term="nextcloud" label="nextcloud"/></entry><entry><title type="text">ArchLinux搭建gitea服务器</title><link rel="alternate" type="text/html" href="https://lengyefenghan.top/blogs/2022-05-20-2/"/><id>https://lengyefenghan.top/blogs/2022-05-20-2/</id><updated>2022-10-24T08:56:14+08:00</updated><published>2022-05-20T12:06:58+08:00</published><author><name>冷夜枫寒</name><uri>https://lengyefenghan.top/</uri><email>lengyefenghan@outlook.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">安装gitea 1 sudo pacman -S gitea 使用 MariaDB/MySQL数据库 安装数据库 1 sudo pacman -S mariadb 初始……</summary><content type="html">&lt;h2 id="安装gitea">安装gitea&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
