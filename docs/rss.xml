@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>冷夜枫寒</title><link>https://lengyefenghan.top/</link><description>冷夜枫寒，一个分享软件、知识的地方。</description><generator>Hugo 0.104.3 https://gohugo.io/</generator><language>zh-cn</language><managingEditor>lengyefenghan@outlook.com (冷夜枫寒)</managingEditor><webMaster>lengyefenghan@outlook.com (冷夜枫寒)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Fri, 04 Nov 2022 17:17:33 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://lengyefenghan.top/rss.xml"/><item><title>博客评论功能测试</title><link>https://lengyefenghan.top/blogs/2022-10-24/</link><guid isPermaLink="true">https://lengyefenghan.top/blogs/2022-10-24/</guid><pubDate>Mon, 24 Oct 2022 11:03:39 +0800</pubDate><author>lengyefenghan@outlook.com (冷夜枫寒)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h1 id="测试giscus评论功能">测试giscus评论功能&lt;/h1>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>冷夜枫寒</title><link>https://lengyefenghan.top/</link><description>冷夜枫寒，一个分享软件、知识的地方。</description><generator>Hugo 0.105.0 https://gohugo.io/</generator><language>zh-cn</language><managingEditor>lengyefenghan@outlook.com (冷夜枫寒)</managingEditor><webMaster>lengyefenghan@outlook.com (冷夜枫寒)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Sun, 06 Nov 2022 10:33:36 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://lengyefenghan.top/rss.xml"/><item><title>博客评论功能测试</title><link>https://lengyefenghan.top/blogs/2022-10-24/</link><guid isPermaLink="true">https://lengyefenghan.top/blogs/2022-10-24/</guid><pubDate>Mon, 24 Oct 2022 11:03:39 +0800</pubDate><author>lengyefenghan@outlook.com (冷夜枫寒)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h1 id="测试giscus评论功能">测试giscus评论功能&lt;/h1>
 &lt;ol>
 &lt;li>2022-10-31 测试可用&lt;/li>
 &lt;/ol>
@@ -298,7 +298,33 @@ index index.html;
 &lt;li>添加扩展 下载最新版 &lt;a href="https://github.com/e-alfred/ocdownloader/releases">https://github.com/e-alfred/ocdownloader/releases&lt;/a> 然后解压到 /var/lib/nextcloud/apps 并且设置用户和组都为nextcloud&lt;/li>
 &lt;li>应用中启用ocdownloader&lt;/li>
 &lt;li>在设置 管理 其他设置ocdownloader 填入aria2的配置&lt;/li>
-&lt;/ol></description><category domain="https://lengyefenghan.top/categories/nextcloud/">Nextcloud</category><category domain="https://lengyefenghan.top/tags/linux/">linux</category><category domain="https://lengyefenghan.top/tags/nextcloud/">nextcloud</category><category domain="https://lengyefenghan.top/tags/aria2/">aria2</category></item><item><title>Nextcloud踩坑记</title><link>https://lengyefenghan.top/blogs/2022-05-29/</link><guid isPermaLink="true">https://lengyefenghan.top/blogs/2022-05-29/</guid><pubDate>Sun, 29 May 2022 07:47:39 +0800</pubDate><author>lengyefenghan@outlook.com (冷夜枫寒)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="windows下无法同步文件夹">Windows下无法同步文件夹&lt;/h2>
+&lt;/ol>
+&lt;h1 id="调整nextcloud分片上传">调整nextcloud分片上传&lt;/h1>
+&lt;p>为了在上传带宽较高的环境中提升上传性能，可以调整服务器的上传块大小：
+sudo -u www-data php occ config:app:set files max_chunk_size --value 20971520
+输入一个以字节为单位的值（在本例中为 20MB）。设置为完全不分块。--value 0&lt;/p>
+&lt;p>默认值为 10485760 (10 MiB)。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">#关闭分片大小&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo --user&lt;span class="o">=&lt;/span>www-data php /var/www/nextcloud/occ config:app:set files max_chunk_size --value &lt;span class="m">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#如果开启apcu&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo --user&lt;span class="o">=&lt;/span>www-data php --define apc.enable_cli&lt;span class="o">=&lt;/span>&lt;span class="m">1&lt;/span> /var/www/nextcloud/occ config:app:set files max_chunk_size --value &lt;span class="m">0&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h1 id="文件上传一段时间没有速度-之后失败">文件上传一段时间没有速度 之后失败&lt;/h1>
+&lt;p>调整缓存位置
+php/pool.d/www.conf&lt;/p>
+&lt;pre tabindex="0">&lt;code>env[TMP] = /tmp
+env[TMPDIR] = /tmp
+env[TEMP] = /tmp
+&lt;/code>&lt;/pre>&lt;p>修改合适路径&lt;/p></description><category domain="https://lengyefenghan.top/categories/nextcloud/">Nextcloud</category><category domain="https://lengyefenghan.top/tags/linux/">linux</category><category domain="https://lengyefenghan.top/tags/nextcloud/">nextcloud</category><category domain="https://lengyefenghan.top/tags/aria2/">aria2</category></item><item><title>Nextcloud踩坑记</title><link>https://lengyefenghan.top/blogs/2022-05-29/</link><guid isPermaLink="true">https://lengyefenghan.top/blogs/2022-05-29/</guid><pubDate>Sun, 29 May 2022 07:47:39 +0800</pubDate><author>lengyefenghan@outlook.com (冷夜枫寒)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="windows下无法同步文件夹">Windows下无法同步文件夹&lt;/h2>
 &lt;ol>
 &lt;li>文件夹大小写区分问题
 在windows下默认文件夹不区分大小写，也就是&amp;quot;test&amp;quot;和&amp;quot;TEST&amp;quot;是同一个文件夹，如果想要同步文件夹，需要设置文件夹大小写区分&lt;/li>
