@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /get-update
+Disallow: /css
+Disallow: /js
+
+Allow: /about
+Allow: /blogs
+Allow: /categories
+Allow: /links
+Allow: /storys
+Allow: /tags
+Sitemap: https://lengyefenghan.top/sitemap.xml
