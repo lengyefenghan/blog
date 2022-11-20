@@ -1,7 +1,7 @@
 ##########################################
 # 站点配置
 
-baseURL = "https://lengyefenghan.top/"
+baseURL = "https://blog.lengyefenghan.top"
 title = "lengyefenghan"
 languageCode = "zh-cn"
 hasCJKLanguage = true
@@ -102,9 +102,9 @@ uglyURLs = false
     # 座右铭或简介
     motto = "Dream it prossble!"
     # 头像
-    avatar = "/icons/lengyefenghan-logo.png"
+    avatar = "icons/lengyefenghan-logo.png"
     # 网站（默认值：baseURL）
-    website = "https://lengyefenghan.top/"
+    website = "https://blog.lengyefenghan.top/"
     # 推特
     #twitter = ""
 
