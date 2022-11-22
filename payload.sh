@@ -2,7 +2,7 @@
 
 cd /var/www/blog
 
-git pull --force origin master:master
+git pull --force
 
 git submodule update --init --recursive
 
