@@ -44,10 +44,12 @@ disablePathToLower = false
 relativeURLs = false
 uglyURLs = false
 
-# URL 结构
+# URL 结构 修改为日期格式
 [permalinks]
     categories = "/categories/:slug/"
     tags = "/tags/:slug/"
+    blogs = "/:year/:month/:slug/"
+    storys = "/:year/:month/:slug/"
 
 # 类别
 [taxonomies]
