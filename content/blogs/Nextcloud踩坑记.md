@@ -84,11 +84,15 @@ env[TEMP] = /tmp
    修改合适路径
 
 # 扫描本地文件更改
+
 ``` sh
 sudo --user=www-data php /var/www/nextcloud/occ files:scan --all
 ```
+
 # 定时任务
+
 /etc/systemd/system/nextcloudcron.service
+
 ``` ini
 [Unit]
 Description=Nextcloud cron.php job
@@ -98,7 +102,9 @@ User=www-data
 ExecStart=/usr/bin/php -f /var/www/nextcloud/cron.php
 KillMode=process
 ```
+
 /etc/systemd/system/nextcloudcron.timer
+
 ``` ini
 [Unit]
 Description=Run Nextcloud cron.php every 5 minutes
@@ -111,7 +117,9 @@ Unit=nextcloudcron.service
 [Install]
 WantedBy=timers.target
 ```
+
 开启
+
 ``` sh
 systemctl enable --now nextcloudcron.timer
 ```
@@ -122,6 +130,7 @@ systemctl enable --now nextcloudcron.timer
 $ mariadb -u root -p
 SHOW VARIABLES like '%flush%';
 ```
+
 以下引用：
 
 https://cloud.tencent.com/developer/article/1441303

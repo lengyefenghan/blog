@@ -37,41 +37,45 @@ FileRun是一个类似于Nextcloud的PHP网盘程序，但是由于我不考虑�
 ```
 ## 配置nginx
 ```conf
-server {
-    listen 80;
-    server_name cloud.example.com;
+server {  
+  listen 80;
+  listen [::]:80;
+  server_name _;
+  root /var/www/filerun/;
+  index index.php index.html;
 
-    # 网站根目录    
-    root /var/www/filerun;
+  location / {
+    try_files $uri $uri/ /index.php;
+  }
 
-    #以下配置来自filerun官方demo
-    location ~ [^/]\.php(/|$) {
-        fastcgi_split_path_info ^(.+?\.php)(/.*)$;
-        if (!-f $document_root$fastcgi_script_name) {
-            return 404;
-        }
-
-        # Mitigate https://httpoxy.org/ vulnerabilities
-        #fastcgi_param HTTP_PROXY "";
-        
-        # 此处修改为正确的fastcgi地址            
-        fastcgi_pass  unix:/var/run/php/php7.4-fpm.sock;
-        #fastcgi_pass 127.0.0.1:9000;
-        fastcgi_index index.php;
-
-        # include the fastcgi_param setting
-        include fastcgi_params;
-
-        # SCRIPT_FILENAME parameter is used for PHP FPM determining
-        #  the script name. If it is not set in fastcgi_params file,
-        # i.e. /etc/nginx/fastcgi_params or in the parent contexts,
-        # please comment off following line:
-        # fastcgi_param  SCRIPT_FILENAME   $document_root$fastcgi_script_name;
-
-        #确保以下代码没有注释掉        
-        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-        fastcgi_param PATH_INFO $fastcgi_path_info;
+  location ~ [^/]\.php(/|$) {
+    fastcgi_split_path_info ^(.+?\.php)(/.*)$;
+    if (!-f $document_root$fastcgi_script_name) {
+        return 404;
     }
+
+
+    include fastcgi_params;
+    include snippets/fastcgi-php.conf;
+
+    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    fastcgi_param PATH_INFO $fastcgi_path_info;
+    fastcgi_pass unix:/run/php/php7.4-fpm.sock;
+  }
+
+ # A long browser cache lifetime can speed up repeat visits to your page
+  location ~* \.(jpg|jpeg|gif|png|webp|svg|woff|woff2|ttf|css|js|ico|xml)$ {
+       access_log        off;
+       log_not_found     off;
+       expires           360d;
+  }
+
+  # disable access to hidden files
+  location ~ /\.ht {
+      access_log off;
+      log_not_found off;
+      deny all;
+  }
 }
 ```
 ### 配置数据库mysql
@@ -116,5 +120,4 @@ chown www-data:www-data path
 9. 设置下权限里面的路径，基本完成安装
 
 ## 开启ssl
-研究失败放弃部署
 
