@@ -21,9 +21,9 @@
 
 [[socials]]
     id = "gitea"
-    url = "https://gitea.lengyefenghan.top/lengyefenghan"
+    url = "https://github.com/lengyefenghan"
     icon = "github"
-    title = "Gitea"
+    title = "Github"
     weight = 3
 
 # [[socials]]
