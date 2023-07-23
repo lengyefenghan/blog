@@ -7,6 +7,7 @@ languageCode = "zh-cn"
 hasCJKLanguage = true
 # 版权信息（支持 Markdown）
 copyright = "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)"
+#copyright = "[豫ICP备19043668号-1](https://beian.miit.gov.cn/)"
 
 # 主题选择
 theme = "meme"
@@ -34,7 +35,7 @@ footnoteReturnLinkContents = "↩"
 enableGitInfo = true
 
 # 是否生成 robots.txt 文件
-enableRobotsTXT = false
+enableRobotsTXT = true
 
 # 每一分页的文章数（仅对「文章摘要」首页布局有效）
 paginate = 5
@@ -93,7 +94,7 @@ uglyURLs = false
 
 # 压缩 HTML
 [minify.tdewolff.html]
-    keepWhitespace = false
+    keepWhitespace = true
 
 # 作者信息
 [author]
@@ -518,14 +519,14 @@ uglyURLs = false
     #      的优先级高于此处
 
     # 是否禁用 MathJax 的右键菜单
-    disableMathJaxMenu = true
+    disableMathJaxMenu = false
 
 
     ######################################
     # Mermaid (https://github.com/mermaid-js/mermaid)
 
     # 是否开启（全局设置）
-    enableMermaid = false
+    enableMermaid = true
     # 说明：文章的 Front Matter 中的 `mermaid`
     #      的优先级高于此处
 
@@ -937,7 +938,7 @@ uglyURLs = false
     ## 首字下沉
 
     # 是否开启（全局设置）
-    enableDropCap = false
+    enableDropCap = true
     # 说明：文章的 Front Matter 中的 `dropCap`
     #      的优先级高于此处
 
@@ -992,7 +993,7 @@ uglyURLs = false
     # 文章更新徽章
 
     # 是否开启
-    enablePostUpdatedBadge = true
+    enablePostUpdatedBadge = false
 
     # 是否显示（全局设置）
     displayUpdatedBadge = true
@@ -1280,7 +1281,7 @@ uglyURLs = false
     ######################################
     # Instant Page
 
-    enableInstantPage = true
+    enableInstantPage = false
     # 说明：https://github.com/instantpage/instant.page
 
 
@@ -1333,8 +1334,8 @@ uglyURLs = false
     [params.lib.path]
         clipboard = "/npm/clipboard-polyfill@2.8.6/dist/clipboard-polyfill.min.js"
         instantsearch = "/npm/instantsearch.js@2/dist/instantsearch.min.js"
-        #gitalk = "/npm/gitalk@1/dist/gitalk.min.js"
-        #gitalk_css = "/npm/gitalk@1/dist/gitalk.css"
+        gitalk = "/npm/gitalk@1/dist/gitalk.min.js"
+        gitalk_css = "/npm/gitalk@1/dist/gitalk.css"
         instantpage = "/npm/instant.page@5.1.0/instantpage.min.js"
         katex = "/npm/katex@0.13.0/dist/katex.min.js"
         katex_css = "/npm/katex@0.13.0/dist/katex.min.css"
